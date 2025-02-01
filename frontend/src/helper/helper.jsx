@@ -1,4 +1,4 @@
-export const BASE_URL = "http://localhost:2000"
+export const BASE_URL = "https://api.bilvani.com"
 
 ///https://bilvani-all-change23-8.onrender.com final 
 
