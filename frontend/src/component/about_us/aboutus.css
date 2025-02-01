@@ -1,0 +1,228 @@
+.about_us_edit{
+  margin-top: 7%;
+  background-color: #f6d9d1;
+  min-height: 100vh;
+}
+
+.about-us-container {
+  font-family: Arial, sans-serif;
+  color: #333;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.about-us-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-us-header h1 {
+  font-size: 3em;
+ 
+}
+
+.about-us-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.company-info,
+.mission-vision,
+.team {
+  margin-bottom: 20px;
+}
+
+.company-info h2,
+.mission-vision h2,
+.team h2 {
+  font-size: 2em;
+
+  margin-bottom: 10px;
+}
+
+.company-info p,
+.mission-vision p,
+.team p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.team-members {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  text-align: center;
+  max-width: 200px;
+  margin: 10px;
+}
+
+.team-member img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.team-member h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2em;
+}
+
+.about-us-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.about-us-footer p {
+  margin: 5px 0;
+}
+
+.about-us-footer nav a {
+  color: #2874f0;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.about-us-footer nav a:hover {
+  text-decoration: underline;
+}
+
+
+/* Small devices (mobile portrait) */
+@media (max-width: 767px) {
+  .about_us_edit{
+    margin-top: 7.5rem;
+  }
+  .about-us-header h1 {
+    font-size: 2em;
+  }
+
+  .about-us-content {
+    padding: 15px;
+  }
+
+  .company-info h2,
+  .mission-vision h2,
+  .team h2 {
+    font-size: 1.5em;
+  }
+
+  .company-info p,
+  .mission-vision p,
+  .team p {
+    font-size: 1em;
+  }
+
+  .team-members {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-member {
+    max-width: 100%;
+    margin: 20px 0;
+  }
+
+  .team-member img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .team-member h3 {
+    font-size: 1em;
+  }
+
+  .about-us-footer p {
+    font-size: 0.9em;
+  }
+
+  .about-us-footer nav a {
+    font-size: 0.9em;
+    margin: 0 5px;
+  }
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .about_us_edit{
+    margin-top: 7.5rem;
+  }
+  .about-us-header h1 {
+    font-size: 2.5em;
+  }
+
+  .company-info h2,
+  .mission-vision h2,
+  .team h2 {
+    font-size: 1.8em;
+  }
+
+  .team-members {
+    justify-content: space-between;
+  }
+
+  .team-member {
+    max-width: 45%;
+  }
+
+  .team-member img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .team-member h3 {
+    font-size: 1.1em;
+  }
+
+  .about-us-footer p {
+    font-size: 1em;
+  }
+
+  .about-us-footer nav a {
+    font-size: 1em;
+  }
+}
+
+/* Large devices (desktops) */
+@media (min-width: 1025px) {
+  .about-us-header h1 {
+    font-size: 3em;
+  }
+
+  .company-info h2,
+  .mission-vision h2,
+  .team h2 {
+    font-size: 2em;
+  }
+
+  .team-members {
+    justify-content: space-around;
+  }
+
+  .team-member {
+    max-width: 200px;
+  }
+
+  .team-member img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .team-member h3 {
+    font-size: 1.2em;
+  }
+
+  .about-us-footer p {
+    font-size: 1.1em;
+  }
+
+  .about-us-footer nav a {
+    font-size: 1.1em;
+  }
+}

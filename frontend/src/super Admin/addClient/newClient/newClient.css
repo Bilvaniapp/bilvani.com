@@ -1,0 +1,126 @@
+/* Updated Container Styles for Wider Layout */
+.container-1 {
+    max-width: 1200px; /* Increased width for better alignment */
+    margin: 50px auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.m-heading {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Form Grid Layout for Better Alignment */
+.grid-form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Two columns for alignment */
+    gap: 15px;
+    width: 100%;
+}
+
+.form-field-m {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.label-m {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #555;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+    background: #f9f9f9;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
+    background: #ffffff;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+.btn-m {
+    display: inline-block; /* Ensures it's treated as an inline element */
+    padding: 8px 16px; /* Smaller padding for a compact look */
+    font-size: 14px; /* Slightly smaller font size */
+    font-weight: bold; /* Optional: makes the text stand out */
+    color: #fff; /* Button text color */
+    background-color: #007bff; /* Primary blue background */
+    border: none; /* Removes default border */
+    border-radius: 4px; /* Slightly rounded corners */
+    cursor: pointer; /* Pointer cursor for button */
+    transition: background-color 0.3s ease; /* Smooth color transition */
+    margin-left: 390px;
+    margin-top: 25px;
+    
+  }
+  
+  .btn-m:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
+  .btn-m:active {
+    background-color: #003f7f; /* Even darker shade when clicked */
+  }
+
+/* Error and Success Messages */
+.error-message,
+.success-message {
+    font-size: 1rem;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.error-message {
+    color: #d32f2f;
+    background: #ffebee;
+    border: 1px solid #ef9a9a;
+}
+
+.success-message {
+    color: #388e3c;
+    background: #e8f5e9;
+    border: 1px solid #a5d6a7;
+}
+
+/* Media Query for Responsive Design */
+@media screen and (max-width: 768px) {
+    .container-1 {
+        padding: 20px;
+    }
+
+    .grid-form {
+        grid-template-columns: 1fr; /* Single column for smaller screens */
+    }
+
+    .submit-button {
+        width: 100%;
+    }
+}

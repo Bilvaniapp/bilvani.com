@@ -1,0 +1,66 @@
+.changeRadio{
+    width: 10px;
+}
+
+.modal_cod {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  
+  .modal-content_cod {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+  }
+  
+ 
+  
+ 
+  
+  .otp-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .btnContainerCod{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .codbtnCss {
+    background-color: #fb641b;
+    margin-top: 7%;
+    font-weight: 500;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: transform 0.1s ease, background-color 0.1s ease;
+  }
+  .codbtnCss:hover{
+    background-color: #fb641b;
+    color: #fff;
+  }
+  .codbtnCss:active {
+  
+    transform: scale(0.95); /* Shrink slightly on click */
+  }
+  

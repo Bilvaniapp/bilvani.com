@@ -1,0 +1,420 @@
+
+.bodyss {
+  font-family: poppins;
+  background: #F6D9D1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.form-container {
+  display: flex;
+  background: rgb(255, 252, 252);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 20px;
+  border-bottom-right-radius: 30px;
+
+  
+  width: 400px;
+}
+
+.forImage {
+  display: flex;
+  
+}
+.forImage img {
+  width: 300px;
+  height: 550px;
+  border-top-left-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.signup-form h2 {
+  text-align: center;
+  color: #050505;
+
+  font-size: 2rem;
+  font-weight: bold;
+
+  font-family: poppins;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+}
+
+.input-groups {
+  margin-bottom: 20px;
+  width: 300px;
+  
+}
+.input-groups label {
+  display: block;
+  color: #050505;
+  margin-bottom: 3px;
+  font-weight: 500;
+}
+
+
+
+.input-groups input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+  background-color: #ffbdbd;
+}
+
+.input-groups input[type="text"]{
+  width: 100%;
+  border-radius: 8px;
+}
+
+
+.input-groups input:focus {
+  border-color: #f885c4;
+  box-shadow: 0 0 8px rgba(0, 86, 179, 0.2);
+  outline: none;
+}
+
+.input-groups .input-btn {
+  padding: 6px 25px;
+  border: 1px solid red;
+  background-color: #b31b00;
+  color: rgb(253, 251, 251);
+  border-radius: 50px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: block;
+  margin: 0 auto;
+}
+
+.input-btn:hover{
+  background-color: #f4f4f9;
+  color: #050505;
+  border: 1px solid red;
+}
+
+.mainResendContainer{
+  display: flex;
+  justify-content: end;
+}
+
+.resendotp{
+  color: rgba(2, 2, 110, 0.384);
+  text-decoration: underline;
+
+}
+.resendotp:hover{
+  color: blue;
+}
+.error-message {
+  color: red;
+}
+
+.password-input {
+  position: relative;
+}
+
+
+
+.password-toggle-icon {
+  position: absolute;
+  top: 50%;
+  right: 0.5rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #050505;
+}
+
+.massage-show{
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+
+.signup-form button:disabled {
+  cursor: not-allowed;
+  
+}
+
+.signup-form button:disabled::after {
+  content: "Processing...";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 14px;
+}
+
+@media only screen and (min-width: 200px) and (max-width: 400px) {
+
+    .bodyss {
+        font-family: sans-serif;
+        background-color: #f4f4f9;
+        display: unset;
+        justify-content: unset;
+        align-items: unset;
+        height: unset;
+        margin: 0;
+    
+    }
+    .forImage {
+        display: unset;
+
+
+    }
+
+    .forImage .image {
+        
+        display: flex;
+        justify-content: center;
+        margin-top: 9rem;
+    }
+
+    .forImage img {
+        width: 330px;
+        height: 450px;
+        border-top-left-radius: 30px;
+    }
+
+    .form-container {
+        display: block;
+        margin: 0 auto;
+        width: 330px;
+        margin-bottom: 20px;
+        border-bottom-right-radius: 30px;
+    }
+
+    .input-group {
+        margin-bottom: 20px;
+        width: 260px;
+
+
+    }
+
+
+}
+
+
+@media only screen and (min-width: 400px) and (max-width: 550px) {
+
+    .bodyss {
+        font-family: sans-serif;
+        background-color: #f4f4f9;
+        display: unset;
+        justify-content: unset;
+        align-items: unset;
+        height: unset;
+        margin: 0;
+    
+    }
+
+
+    .forImage {
+        display: unset;
+
+
+    }
+
+    .forImage .image {
+        display: flex;
+        justify-content: center;
+        margin-top: 9rem;
+    }
+
+    .forImage img {
+        width: 370px;
+        height: 450px;
+        border-top-left-radius: 30px;
+      
+    }
+
+    .form-container {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        
+        width: 370px;
+        border-bottom-right-radius: 30px;
+    }
+
+    .input-group {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        width: 280px;
+
+
+    }
+
+
+}
+
+@media only screen and (min-width: 550px) and (max-width: 650px) {
+
+    .bodyss {
+        font-family: sans-serif;
+        background-color: #f4f4f9;
+        display: unset;
+        justify-content: unset;
+        align-items: unset;
+        height: unset;
+        margin: 0;
+    
+    }
+
+
+    .forImage {
+        display: unset;
+
+
+    }
+
+    .forImage .image {
+        display: flex;
+        justify-content: center;
+        margin-top: 9rem;
+    }
+
+    .forImage img {
+        width: 350px;
+        height: 450px;
+        border-top-left-radius: 30px;
+      
+    }
+
+    .form-container {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        width: 350px;
+        border-bottom-right-radius: 30px;
+    }
+
+    .input-group {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        width: 280px;
+
+
+    }
+
+
+}
+
+@media only screen and (min-width: 650px) and (max-width: 750px) {
+
+    .bodyss {
+        font-family: sans-serif;
+        background-color: #f4f4f9;
+        display: unset;
+        justify-content: unset;
+        align-items: unset;
+        height: unset;
+        margin: 0;
+    
+    }
+
+
+    .forImage {
+        display: unset;
+
+
+    }
+
+    .forImage .image {
+        display: flex;
+        justify-content: center;
+        margin-top: 10rem;
+    }
+
+    .forImage img {
+        width: 410px;
+        height: 450px;
+        border-top-left-radius: 30px;
+      
+    }
+
+    .form-container {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        width: 410px;
+        border-bottom-right-radius: 30px;
+    }
+
+    .input-group {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        width: 280px;
+
+
+    }
+
+
+}
+
+@media only screen and (min-width: 750px) and (max-width: 850px) {
+
+  .bodyss {
+      font-family: sans-serif;
+      background-color: #f4f4f9;
+      display: unset;
+      justify-content: unset;
+      align-items: unset;
+      height: unset;
+      margin: 0;
+  
+  }
+
+
+  .forImage {
+      display: unset;
+
+
+  }
+
+  .forImage .image {
+      display: flex;
+      justify-content: center;
+      margin-top: 10rem;
+  }
+
+  .forImage img {
+      width: 410px;
+      height: 450px;
+      border-top-left-radius: 30px;
+    
+  }
+
+  .form-container {
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 40px;
+      width: 410px;
+      border-bottom-right-radius: 30px;
+  }
+
+  .input-group {
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      width: 280px;
+
+
+  }
+
+
+}
+

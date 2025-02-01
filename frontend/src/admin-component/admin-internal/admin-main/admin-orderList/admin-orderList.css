@@ -1,0 +1,148 @@
+.admin-orders-wrapper {
+  padding: 20px;
+
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+
+.orders-containers {
+  width: 100%;
+  margin: 0 auto;
+
+  padding: 30px;
+  border-radius: 12px;
+
+  transition: all 0.3s ease;
+}
+
+.orders-container:hover {
+  transform: translateY(-5px);
+}
+
+.orders-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 20px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 15px;
+}
+
+.orders-table th {
+  background-color: #f9fafb;
+  font-weight: 600;
+  font-size: 14px;
+  color: #7a889a;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.orders-table td {
+  font-size: 14px;
+  color: #525f7f;
+}
+
+.orders-table tr:hover {
+  background-color: #f4f6f8;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.orders-table td span {
+  display: block;
+}
+
+.orders-loading,
+.orders-error,
+.orders-empty {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 50px;
+  color: #888888;
+}
+
+.orders-loading {
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.orders-empty {
+  color: #e74c3c;
+}
+
+.orders-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.orders-button:hover {
+  background-color: #2980b9;
+}
+
+.export-excel-button {
+    display: flex;
+    justify-content: center;
+    transition: transform 0.2s ease-in; 
+    cursor: pointer; 
+  }
+  
+  .export-excel-button:hover {
+    transform: scale(1.05); 
+  }
+  
+  .export-excel-button:focus {
+    outline: none;
+    transform: scale(0.95); /
+  }
+  
+  .export-excel-button:active {
+    transform: scale(0.9); 
+  }
+
+  
+
+@media (max-width: 768px) {
+  .orders-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .orders-table th,
+  .orders-table td {
+    padding: 15px;
+  }
+
+  .orders-title {
+    font-size: 24px;
+  }
+}

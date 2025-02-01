@@ -1,0 +1,486 @@
+.home-product {
+  margin-top: 3%;
+  background-color: #f6d9d1;
+  min-height: 100vh;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.bilavani_banner {
+  margin-top: 3%;
+  position: relative;
+  border-radius: 5px;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-image {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.1);
+  transition: all 1s ease-in-out;
+  z-index: 1;
+}
+
+.banner-image.active {
+  left: 0;
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+.banner-image.prev {
+  left: -100%;
+  opacity: 0;
+  z-index: 1;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.banner-image.active {
+  animation: slide-in 1s forwards, fade-in 1s forwards;
+}
+
+.banner-image.prev {
+  animation: slide-out 1s forwards, fade-out 1s forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.product-item {
+  border: 1px solid #969494;
+  border-radius: 8px;
+  padding: 10px;
+  padding-left: 7px;
+  padding-right: 7px;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-details {
+  padding: 10px;
+}
+
+.product-details h5 {
+  width: 100%;
+}
+
+.product-details p {
+  margin-bottom: 0;
+}
+
+.product-price {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.product-price .spanss {
+  color: #878787;
+  text-decoration: line-through;
+  font-size: 0.9rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.add_to_cart_btn {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn_actual {
+  border: 2px solid black;
+  color: #fff;
+  font-weight: 700;
+  padding: 4px 30px;
+  background-color: rgb(7, 6, 6);
+}
+
+.btn_actual:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.quantity-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+@media only screen and (min-width: 200px) and (max-width: 400px) {
+  .home-product {
+    margin-top: 30.2%;
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+  }
+  .bilavani_banner {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .banner-image {
+    top: 0;
+    left: unset;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    opacity: 0;
+    transform: scale(1.05);
+    transition: all 1s ease-in-out;
+    z-index: 1;
+  }
+
+  .product-details {
+    padding: 4px;
+  }
+  
+  .product-details h5 {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .btn_actual {
+    border: 2px solid black;
+    color: #fff;
+    font-weight: 700;
+    padding: 5px 7px;
+    font-size: .9rem;
+    background-color: rgb(7, 6, 6);
+  }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 500px) {
+  .home-product {
+    margin-top: 22%;
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+  }
+  .bilavani_banner {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+  }
+
+  .banner-image {
+    top: 0;
+    left: unset;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    opacity: 0;
+    transform: scale(1.05);
+    transition: all 1s ease-in-out;
+    z-index: 1;
+  }
+
+  .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+   
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 600px) {
+  .home-product {
+    margin-top: 16%;
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+  }
+  .bilavani_banner {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .banner-image {
+    top: 0;
+    left: unset;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    opacity: 0;
+    transform: scale(1.05);
+    transition: all 1s ease-in-out;
+    z-index: 1;
+  }
+
+  .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 8px;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 700px) {
+  .home-product {
+    margin-top: 15%;
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+  }
+
+  .bilavani_banner {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .banner-image {
+    top: 0;
+    left: unset;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    opacity: 0;
+    transform: scale(1.05);
+    transition: all 1s ease-in-out;
+    z-index: 1;
+  }
+
+  .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 8px;
+  }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 800px) {
+  .home-product {
+    margin-top: 14%;
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .bilavani_banner {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .banner-image {
+    top: 0;
+    left: unset;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    opacity: 0;
+    transform: scale(1.05);
+    transition: all 1s ease-in-out;
+    z-index: 1;
+  }
+
+  .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 8px;
+  }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 900px) {
+  .home-product {
+    margin-top: 6%;
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .bilavani_banner {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .banner-image {
+    top: 0;
+    left: unset;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    opacity: 0;
+    transform: scale(1.05);
+    transition: all 1s ease-in-out;
+    z-index: 1;
+  }
+
+  .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 8px;
+  }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1000px) {
+    .home-product {
+      margin-top: 5%;
+    }
+  
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+  
+    .bilavani_banner {
+      position: relative;
+      width: 100%;
+      height: 250px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .banner-image {
+      top: 0;
+      left: unset;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transform: scale(1.05);
+      transition: all 1s ease-in-out;
+      z-index: 1;
+    }
+  
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      border-radius: 8px;
+    }
+  }

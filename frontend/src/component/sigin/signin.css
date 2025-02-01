@@ -1,0 +1,431 @@
+.signin-form h2 {
+  text-align: center;
+  color: #050505;
+
+  font-size: 2rem;
+  font-weight: bold;
+
+  font-family: poppins;
+}
+
+.signin-form {
+  display: block;
+  margin-top: 85px;
+  margin: auto;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #007bff;
+  /* Change to your desired focus color */
+}
+
+.input-group i {
+  position: absolute;
+  left: 10px;
+  /* Adjust as needed based on the icon position */
+  top: 50%;
+  transform: translateY(40%);
+  color: #aaa;
+  /* Adjust icon color */
+}
+
+.input-group button {
+  padding: 6px 25px;
+  border: none;
+  background-color: #b31b00;
+  color: rgb(253, 251, 251);
+  border-radius: 50px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: block;
+  margin: 0 auto;
+}
+
+.forImage {
+  margin-top: 100px;
+}
+.forImage img {
+  width: 330px;
+  height: 550px;
+  border-top-left-radius: 30px;
+}
+
+.massage-show {
+  position: fixed; /* Ensure it is fixed on the screen */
+  top: 0%; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999; /* High z-index value */
+  padding: 15px;
+  border-radius: 5px;
+  width: 100%;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.alert {
+  font-size: 1rem; /* Adjust font size if needed */
+}
+
+.fa-user,
+.fa-lock {
+  margin-top: 1.5%;
+}
+
+.password-input-group {
+  position: relative;
+}
+
+.password_padding{
+    padding-left: 2rem;
+}
+.password-input-group input[type="text"]{
+    width: 100%;
+    padding-left: 2rem;
+}
+.password-toggle-icon-signin {
+  position: absolute;
+  right: 10px;
+  top: 75%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+
+
+/* option css button disable  */
+
+.signin-form button:disabled {
+    cursor: not-allowed;
+    
+  }
+  
+  .signin-form button:disabled::after {
+    content: "Processing...";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 14px;
+  }
+  
+@media only screen and (min-width: 200px) and (max-width: 400px) {
+  .bodyss {
+    font-family: sans-serif;
+    background-color: #f4f4f9;
+    display: unset;
+    justify-content: unset;
+    align-items: unset;
+    height: unset;
+    margin: 0;
+  }
+  .forImage {
+    display: unset;
+  }
+
+  .forImage .image {
+    display: flex;
+    justify-content: center;
+    margin-top: 9rem;
+  }
+
+  .forImage img {
+    width: 330px;
+    height: 450px;
+    border-top-left-radius: 30px;
+  }
+
+  .form-container {
+    display: block;
+    margin: 0 auto;
+    width: 330px;
+    margin-bottom: 20px;
+    border-bottom-right-radius: 30px;
+  }
+
+  .input-group {
+    margin-bottom: 20px;
+    width: 260px;
+  }
+}
+@media only screen and (min-width: 400px) and (max-width: 550px) {
+  .bodyss {
+    font-family: sans-serif;
+    background-color: #f4f4f9;
+    display: unset;
+    justify-content: unset;
+    align-items: unset;
+    height: unset;
+    margin: 0;
+  }
+
+  .forImage {
+    display: unset;
+  }
+
+  .forImage .image {
+    display: flex;
+    justify-content: center;
+    margin-top: 9rem;
+  }
+
+  .forImage img {
+    width: 370px;
+    height: 450px;
+    border-top-left-radius: 30px;
+  }
+
+  .form-container {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 40px;
+
+    width: 370px;
+    border-bottom-right-radius: 30px;
+  }
+
+  .input-group {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 280px;
+  }
+}
+
+@media only screen and (min-width: 550px) and (max-width: 650px) {
+  .bodyss {
+    font-family: sans-serif;
+    background-color: #f4f4f9;
+    display: unset;
+    justify-content: unset;
+    align-items: unset;
+    height: unset;
+    margin: 0;
+  }
+
+  .forImage {
+    display: unset;
+  }
+
+  .forImage .image {
+    display: flex;
+    justify-content: center;
+    margin-top: 9rem;
+  }
+
+  .forImage img {
+    width: 350px;
+    height: 450px;
+    border-top-left-radius: 30px;
+  }
+
+  .form-container {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    width: 350px;
+    border-bottom-right-radius: 30px;
+  }
+
+  .input-group {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 280px;
+  }
+}
+
+@media only screen and (min-width: 650px) and (max-width: 750px) {
+  .bodyss {
+    font-family: sans-serif;
+    background-color: #f4f4f9;
+    display: unset;
+    justify-content: unset;
+    align-items: unset;
+    height: unset;
+    margin: 0;
+  }
+
+  .forImage {
+    display: unset;
+  }
+
+  .forImage .image {
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+  }
+
+  .forImage img {
+    width: 410px;
+    height: 450px;
+    border-top-left-radius: 30px;
+  }
+
+  .form-container {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    width: 410px;
+    border-bottom-right-radius: 30px;
+  }
+
+  .input-group {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 280px;
+  }
+}
+
+@media only screen and (min-width: 750px) and (max-width: 850px) {
+  .bodyss {
+    font-family: sans-serif;
+    background-color: #f4f4f9;
+    display: unset;
+    justify-content: unset;
+    align-items: unset;
+    height: unset;
+    margin: 0;
+  }
+
+  .forImage {
+    display: unset;
+  }
+
+  .forImage .image {
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+  }
+
+  .forImage img {
+    width: 410px;
+    height: 450px;
+    border-top-left-radius: 30px;
+  }
+
+  .form-container {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    width: 410px;
+    border-bottom-right-radius: 30px;
+  }
+
+  .input-group {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 280px;
+  }
+}
+
+@media only screen and (min-width: 850px) and (max-width: 950px) {
+  .bodyss {
+    font-family: sans-serif;
+    background-color: #f4f4f9;
+    display: unset;
+    justify-content: unset;
+    align-items: unset;
+    height: unset;
+    margin: 0;
+  }
+
+  .forImage {
+    display: unset;
+  }
+
+  .forImage .image {
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+  }
+
+  .forImage img {
+    width: 410px;
+    height: 450px;
+    border-top-left-radius: 30px;
+  }
+
+  .form-container {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    width: 410px;
+    border-bottom-right-radius: 30px;
+  }
+
+  .input-group {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 280px;
+  }
+}
+
+@media only screen and (min-width: 950px) and (max-width: 1050px) {
+  .bodyss {
+    font-family: sans-serif;
+    background-color: #f4f4f9;
+    display: unset;
+    justify-content: unset;
+    align-items: unset;
+    height: unset;
+    margin: 0;
+  }
+
+  .forImage {
+    display: unset;
+  }
+
+  .forImage .image {
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+  }
+
+  .forImage img {
+    width: 410px;
+    height: 450px;
+    border-top-left-radius: 30px;
+  }
+
+  .form-container {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    width: 410px;
+    border-bottom-right-radius: 30px;
+  }
+
+  .input-group {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 280px;
+  }
+}

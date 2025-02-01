@@ -1,0 +1,91 @@
+.leftsideContainer {
+    margin-top: 0.2rem; /* Reduced the margin top */
+    width: 400px;
+}
+
+.internalDiv1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px; /* Reduced padding */
+}
+
+.internalDiv_Today {
+    font-weight: 600;
+    background-color: rgb(202, 202, 6);
+    padding: 6px; /* Reduced padding */
+}
+
+.box2internal1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px; /* Reduced padding */
+}
+
+.nestedinternal1, .nestedinternal2, .nestedinternal3, .nestedinternal4 {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px; /* Reduced padding */
+    background-color: rgb(24, 24, 26);
+    height: 50px;
+    width: 190px;
+    cursor: pointer;
+}
+
+.nestedinternal1 p, .nestedinternal2 p, .nestedinternal3 p, .nestedinternal4 p {
+    color: white;
+}
+
+.custom-modal-body-admin {
+    flex-grow: 1;
+    display: flex;
+    padding: 2px; /* Reduced padding */
+    overflow-y: auto;
+    max-height: calc(100% - 10px);
+}
+
+.topForm, .middleForm {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 0.8rem; /* Reduced gap between inputs */
+    row-gap: 0.3rem; /* Reduced gap between rows */
+    align-content: center;
+    align-items: center;
+    padding-left: 15px; /* Reduced padding */
+}
+
+.table-container {
+    max-height: 450px; /* Reduced height */
+    overflow-y: auto;
+    border-radius: 8px;
+    padding: 12px; /* Reduced padding */
+}
+
+.particulars-table {
+    width: 100%;
+    border-collapse: collapse;
+    display: block;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    table-layout: fixed;
+    height: 190px;
+    margin: 0px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow-y: auto;
+}
+
+.particulars-table th:nth-child(9), .particulars-table td:nth-child(9) {
+    min-width: 120px;
+    max-width: 150px;
+    text-align: center;
+    padding: 6px 4px; /* Reduced padding */
+}
+
+.add-row-btn, .delete-row-btn {
+    padding: 5px 8px; /* Reduced padding */
+}
+
+.invoiceFooter {
+    margin-top: 6px; /* Reduced margin */
+}

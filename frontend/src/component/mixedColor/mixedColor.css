@@ -1,0 +1,110 @@
+
+
+._starting_color_1 {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f6d9d1;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.mainBock-code {
+  width: 80%;
+  
+  display: inline-flexbox;
+  margin: 7% auto;
+  padding: 20px;
+  background-color: #ffff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-style: normal;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+
+.btn-save-color {
+  border: none;
+  padding: 10px 20px;
+  display: block;
+  margin: 10px auto;
+  border-radius: 3px;
+  font-family: poppins;
+  color: rgb(24, 23, 23);
+  font-weight: 500;
+  font-size: 1.3rem;
+  text-shadow: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.colorContainer_sm{
+  margin-top: 20px;
+}
+
+.colorContainerPresent{
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px; /* Adds space between the color blocks */
+  padding: 30px; /* Adds padding around the grid */
+}
+
+.nailPolishContainer {
+  display: inline-block;
+
+  text-align: center;
+}
+
+/* For Tablets and smaller devices */
+
+
+/* For Mobile Devices */
+@media (max-width: 768px) {
+  .mainBock-code {
+    width: 100%; /* Almost full width for mobile */
+    padding: 10px;
+  }
+
+  .btn-save-color {
+    font-size: 1rem; /* Smaller font size */
+    padding: 8px 14px;
+  }
+
+  .colorContainerPresent {
+    gap: 20px; /* Reduce gap further */
+    padding: 15px;
+  }
+
+  .nailPolishContainer {
+    width: 45%; /* Make items take more space on mobile */
+  }
+}
+
+/* For Small Mobile Devices */
+@media (max-width: 480px) {
+  .mainBock-code {
+    width: 100%; /* Full width */
+    padding: 8px;
+  }
+
+  .btn-save-color {
+    font-size: 0.9rem; /* Smaller font size */
+    padding: 6px 12px;
+  }
+
+  .colorContainerPresent {
+    gap: 15px; /* Smaller gap */
+    padding: 10px;
+  }
+
+  .nailPolishContainer {
+    width: 100%; /* Make items stack vertically */
+  }
+}

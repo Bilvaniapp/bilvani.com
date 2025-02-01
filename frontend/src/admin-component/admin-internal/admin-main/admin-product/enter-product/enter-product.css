@@ -1,0 +1,208 @@
+/* Container */
+.product-upload-container {
+  margin: 0 auto;
+  padding: 10px; /* Reduced padding */
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 1000px; /* Restrict width for better fit */
+}
+
+/* Form Wrapper */
+.product-form-wrapper {
+  padding: 10px; /* Reduced padding */
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ffffff, #e8f0fe); /* Subtle gradient for modern look */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Titles */
+.product-form-title {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 10px; /* Reduced margin */
+  text-align: center; /* Center align for aesthetics */
+  font-weight: bold; /* Emphasize title */
+}
+
+/* Input and Textareas */
+.custom-input-field,
+.custom-textarea {
+  width: 100%;
+  padding: 10px; /* Reduced padding */
+  margin-bottom: 10px; /* Reduced margin */
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem; /* Adjusted for compactness */
+  transition: border-color 0.3s;
+}
+
+.custom-textarea {
+  min-height: 80px; /* Reduced height */
+}
+
+.custom-input-field:focus,
+.custom-textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle glow for focus */
+}
+
+/* Checkbox */
+.custom-checkbox-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Reduced margin */
+  font-size: 0.9rem; /* Adjusted size */
+}
+
+.custom-checkbox-label input {
+  margin-right: 5px; /* Reduced space */
+}
+
+/* File Upload */
+input[type="file"] {
+  display: none;
+}
+
+.custom-upload-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100px; /* Reduced height */
+  border: 2px dashed #007bff;
+  border-radius: 8px;
+  text-align: center;
+  color: #007bff;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  margin-bottom: 10px; /* Reduced margin */
+}
+
+.custom-upload-label:hover {
+  border-color: #0056b3;
+  background-color: #f0f8ff; /* Light background on hover */
+}
+
+.custom-upload-label i {
+  font-size: 2rem; /* Reduced size */
+  margin-right: 5px;
+}
+
+.custom-upload-label p {
+  margin: 0;
+  font-size: 0.9rem; /* Adjusted font size */
+}
+
+/* Image Preview */
+.image-preview-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Reduced gap */
+  margin: 10px 0; /* Reduced margin */
+  justify-content: center; /* Center alignment for compact view */
+}
+
+.image-container {
+  position: relative;
+}
+
+.preview-image {
+  width: 100px; /* Reduced size */
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.remove-image-btn {
+  position: absolute;
+  top: 3px; /* Adjusted for smaller size */
+  right: 3px;
+  background-color: rgba(255, 0, 0, 0.8);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  font-size: 0.8rem; /* Reduced font size */
+}
+
+/* Submit Button */
+.custom-submit-btn {
+  display: block;
+  width: 100%;
+  padding: 10px; /* Reduced padding */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem; /* Adjusted font size */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-submit-btn:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+}
+
+/* Dropdown */
+.category-select,
+.subcategory-select {
+  width: 100%;
+  padding: 8px; /* Reduced padding */
+  margin: 5px 0; /* Reduced margin */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.9rem; /* Adjusted font size */
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.category-select:focus,
+.subcategory-select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+  .product-upload-container {
+    padding: 5px;
+  }
+
+  .custom-upload-label {
+    height: 80px; /* Further reduce for mobile */
+  }
+
+  .product-form-title {
+    font-size: 1.2rem;
+  }
+
+  .custom-input-field,
+  .custom-textarea,
+  .category-select,
+  .subcategory-select {
+    font-size: 0.8rem; /* Adjust for smaller screens */
+  }
+
+  .custom-submit-btn {
+    font-size: 0.9rem;
+  }
+
+  .preview-image {
+    width: 80px; /* Adjust size for mobile */
+    height: 80px;
+  }
+
+  .remove-image-btn {
+    width: 15px;
+    height: 15px;
+    font-size: 0.7rem; /* Adjust button size */
+  }
+}

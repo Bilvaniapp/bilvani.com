@@ -1,0 +1,80 @@
+/* General Page Styling */
+.managepaymentout {
+    background-color: #f9f9f9;
+    padding: 20px;
+   
+}
+
+/* Title Styling */
+.managepaymentoutTitle {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: bold;
+    margin-top: 36px;
+}
+
+/* Error Message Styling */
+.managepaymentoutError {
+    text-align: center;
+    color: #d9534f;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Table Styling */
+.managepaymentoutTable {
+    margin: 0 auto;
+    width: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Table Header */
+.managepaymentoutTableHeaderRow {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.managepaymentoutTableHeader {
+    padding: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Table Body */
+.managepaymentoutTableCell {
+    padding: 12px;
+    text-align: center;
+    color: #555;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Alternate Row Colors */
+.managepaymentoutTableRow:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.managepaymentoutTableRow:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Hover Effect on Rows */
+.managepaymentoutTableRow:hover {
+    background-color: #e9f5ff;
+    transition: background-color 0.3s ease;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .managepaymentoutTable {
+        width: 100%;
+    }
+}

@@ -1,0 +1,171 @@
+.mainBlockSelectedColor {
+  background-color: #f6d9d1;
+}
+
+.mainBock-codes {
+  margin: 70px;
+
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-style: normal;
+
+  backdrop-filter: blur(10px);
+}
+
+.colorAPi {
+  width: 60px;
+  height: 60px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border: 0.4px solid rgb(63, 63, 63);
+}
+.colorAPiShade{
+  width: 50px;
+  height: 50px;
+ border-radius: 6px;
+}
+.boxal-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.boxal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.boxal-parent p {
+  text-align: center;
+  padding: 20px;
+  font-weight: 600;
+}
+.boxal-divColor {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 40%;
+}
+
+
+.shades-container {
+  display: flex;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.color-shade-container {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+
+  
+  gap: 40px;
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.shades-container {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.forButtonClickShade{
+  display: flex;
+  flex-direction: column;
+}
+
+.forButtonClickShade {
+  position: relative; /* Make the parent container the reference for absolute positioning */
+}
+
+.bottom-corner-btn {
+  position: absolute;
+  bottom: 10px; /* Adjust the distance from the bottom */
+  right: 10px; /* Adjust the distance from the right */
+}
+
+@media (max-width: 480px) {
+ 
+.infoColorShade{
+  font-size: 9px !important;
+}
+  .boxal {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .boxal-parent p {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .boxal-divColor {
+    width: 100%;
+  }
+
+  .colorAPi {
+    width: 50px;
+    height: 50px;
+  }
+
+  .colorAPiShade {
+    width: 40px;
+    height: 40px;
+  }
+
+  .shades-container {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .color-shade-container {
+   width: 320px;
+  }
+}
+
+/* Tablet (481px - 768px) */
+@media (max-width: 768px) {
+  .infoColorShade{
+    font-size: 10px !important;
+  }
+  .boxal {
+  max-width: 100vw;
+   
+
+  }
+
+  .boxal-divColor {
+    width: 100%;
+  }
+
+  .colorAPi {
+    width: 55px;
+    height: 55px;
+  }
+
+  .colorAPiShade {
+    width: 45px;
+    height: 45px;
+  }
+
+  .shades-container {
+    grid-template-columns: repeat(2, 1fr);
+    width: 320px;
+    gap: 4px;
+  }
+
+
+}

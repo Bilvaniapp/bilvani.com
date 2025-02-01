@@ -1,0 +1,275 @@
+/* General Page Styling */
+.sm-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.sm-inner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1390px;
+    justify-content: flex-start;
+    margin-left: 150px;
+}
+
+/* Title Styling */
+.sm-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Error Message Styling */
+.sm-error-message {
+    text-align: center;
+    color: #d9534f;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Table Styling */
+.sm-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.sm-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Table Header */
+.sm-table thead {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.sm-table th {
+    padding: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Table Body */
+.sm-table td {
+    padding: 12px;
+    text-align: center;
+    color: #555;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Alternate Row Colors */
+.sm-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.sm-table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Hover Effect on Rows */
+.sm-table tbody tr:hover {
+    background-color: #e9f5ff;
+    transition: background-color 0.3s ease;
+}
+
+/* No Data Message */
+.sm-no-data {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Search Bar Styling */
+.sm-search-bar {
+    display: block;
+    margin: 0 auto 20px;
+    padding: 8px 12px;
+    width: 50%;
+    max-width: 400px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.ajubajusearch{
+    margin-bottom: 20px;
+}
+
+
+
+.sm-search-container {
+    width: 500px;
+    margin-right: 700px;
+    
+    
+}
+.sm-filter-dropdown{
+    display: flex;
+    width: 300px;
+    margin-left: 30px;
+    
+   
+}
+/* Focus Effect */
+.sm-search-bar:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Placeholder Text */
+.sm-search-bar::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Modal Styling */
+.sm-modal-overlay {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    overflow-y: auto;
+}
+
+.sm-modal-content {
+    position: relative;
+    margin: auto;
+    width: 90%;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    z-index: 10000;
+}
+
+/* Modal Title */
+.sm-modal-title {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Modal Form Styling */
+.sm-modal-form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label Styling */
+.form-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+/* Input Styling */
+.sm-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.sm-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Modal Actions */
+.sm-actions {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Buttons Styling */
+.sm-save-btn,
+.sm-cancel-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    gap: 40px; 
+    
+   
+}
+.saveandcancelbtn{
+    display: flex;
+    gap: 30px;
+    margin-left: 270px;
+    
+}
+.sm-save-btn {
+    background-color: #28a745;
+    color: white;
+    
+}
+
+.sm-save-btn:hover {
+    background-color: #218838;
+}
+
+.sm-cancel-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.sm-cancel-btn:hover {
+    background-color: #c82333;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .sm-modal-content {
+        width: 95%;
+        font-size: 0.9rem;
+    }
+
+    .sm-modal-form-grid {
+        grid-template-columns: 1fr; /* Single column for smaller screens */
+    }
+
+    .sm-save-btn,
+    .sm-cancel-btn {
+        padding: 8px 16px;
+    }
+
+    .sm-table th,
+    .sm-table td {
+        padding: 8px;
+    }
+}

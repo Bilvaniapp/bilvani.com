@@ -1,0 +1,148 @@
+/* General form styling */
+.mainFormadmin {
+    margin-top: 10px;
+    border-radius: 8px;
+    
+    background-color: #f9f9f9;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+
+  
+  .formadmin {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 100%;
+  
+  }
+  
+  .inputForm label {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .inputForm input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border 0.3s ease;
+  }
+  
+  .inputForm input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Button styling */
+  .adminbtnSubmi, 
+  .formadmin .adminbtn {
+    display: block;
+   
+  padding: 10px 20px;
+    margin: 20px auto;
+    background-color: rgb(22, 153, 22);
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    color: #f7f3f3;
+    font-size: 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .adminbtnSubmi:hover, 
+  .formadmin .adminbtn:hover {
+    background-color: rgb(18, 135, 18);
+  }
+  
+  .save-btn {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .save-btn:hover {
+    background-color: #45a049;
+  }
+  
+  /* Original submit-btn styling */
+  .submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transfrom;
+  }
+  
+  .submit-btn:active {
+    transform: scale(0.95);
+  }
+  
+  .submit-btn:hover {
+    background-color: #45a049;
+  }
+  
+  /* Pagination styling */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pagination button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    margin-right: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .pagination button:hover {
+    background-color: #0056b3;
+  }
+  
+  .pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .pagination button.active {
+    background-color: #fff;
+    color: #e20d0d;
+    font-size: 1.2rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .formadmin, .inputFormadmin, .adminbtnSubmi, .save-btn {
+      width: 100%;
+      padding: 2px;
+    }
+  
+    .inputForm input {
+      font-size: 0.9rem;
+      padding: 8px;
+    }
+    
+    .pagination button {
+      font-size: 0.9rem;
+      padding: 6px 10px;
+    }
+  }
+  

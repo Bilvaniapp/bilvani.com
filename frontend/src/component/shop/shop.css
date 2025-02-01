@@ -1,0 +1,428 @@
+.filter-option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+  padding: 10px;
+ 
+  border-radius: 8px;
+
+  position: fixed;
+
+  left: 10px;
+  right: 10px ;
+}
+
+.product-container-shop{
+  margin-top: 6%;
+}
+
+.filter-option select {
+  padding: 8px 20px;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  background-color: #fff;
+  font-size: 14px;
+  color: #555;
+  transition: all 0.3s ease;
+}
+
+.filter-option select:focus {
+  border-color: #dfe4e9;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+
+  outline: none;
+}
+
+.filter-option select:hover {
+  border-color: #e1e6eb;
+}
+
+.filter-option select option {
+  padding: 10px;
+  background-color: #fff;
+  color: #333;
+}
+
+
+.cart_btn{
+  background-color: #555;
+  font-size: .8rem;
+  color: #f9f9f9;
+  transition: transform 0.1s ease;
+  &:active{
+    transform: scale(0.95);
+  }
+}
+
+
+@media only screen and (min-width: 200px) and (max-width: 400px){
+  .filter-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    gap: 10px;
+    padding: 10px;
+   
+    border-radius: 8px;
+  
+    position: fixed;
+    top: 17%;
+    left: 10px;
+    right: 10px ;
+  }
+  
+  
+  
+  .filter-option select {
+    padding: 8px 6px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    background-color: #fff;
+    font-size: 13px;
+    color: #555;
+    transition: all 0.3s ease;
+  }
+  
+  .filter-option select:focus {
+    border-color: #dfe4e9;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  
+    outline: none;
+  }
+  
+  .filter-option select:hover {
+    border-color: #e1e6eb;
+  }
+  
+  .filter-option select option {
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+  }
+  
+
+
+}
+
+@media only screen and (min-width: 400px) and (max-width: 500px){
+  .filter-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    gap: 10px;
+    padding: 10px;
+   
+    border-radius: 8px;
+  
+    position: fixed;
+    top: 15%;
+    left: 10px;
+    right: 10px ;
+ 
+  }
+  
+  .product-container-shop{
+    margin-top: 1.8rem;
+  }
+  
+  .filter-option select {
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    background-color: #fff;
+    font-size: 15px;
+    color: #555;
+    transition: all 0.3s ease;
+  }
+  
+  .filter-option select:focus {
+    border-color: #dfe4e9;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  
+    outline: none;
+  }
+  
+  .filter-option select:hover {
+    border-color: #e1e6eb;
+  }
+  
+  .filter-option select option {
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+  }
+  
+
+
+}
+
+@media only screen and (min-width: 500px) and (max-width: 600px){
+  .filter-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    gap: 10px;
+    padding: 10px;
+   
+    border-radius: 8px;
+  
+    position: fixed;
+    top: 15%;
+    left: 10px;
+    right: 10px ;
+ 
+  }
+  
+  .product-container-shop{
+    margin-top: 1rem;
+  }
+  
+  .filter-option select {
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    background-color: #fff;
+    font-size: 15px;
+    color: #555;
+    transition: all 0.3s ease;
+  }
+  
+  .filter-option select:focus {
+    border-color: #dfe4e9;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  
+    outline: none;
+  }
+  
+  .filter-option select:hover {
+    border-color: #e1e6eb;
+  }
+  
+  .filter-option select option {
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+  }
+  
+
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 700px){
+  .filter-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    gap: 10px;
+    padding: 10px;
+   
+    border-radius: 8px;
+  
+    position: fixed;
+    top: 15%;
+    left: 10px;
+    right: 10px ;
+ 
+  }
+  
+  .product-container-shop{
+    margin-top: 1rem;
+  }
+  
+  .filter-option select {
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    background-color: #fff;
+    font-size: 15px;
+    color: #555;
+    transition: all 0.3s ease;
+  }
+  
+  .filter-option select:focus {
+    border-color: #dfe4e9;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  
+    outline: none;
+  }
+  
+  .filter-option select:hover {
+    border-color: #e1e6eb;
+  }
+  
+  .filter-option select option {
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+  }
+  
+
+
+}
+
+
+@media only screen and (min-width: 700px) and (max-width: 800px){
+  .filter-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    gap: 10px;
+    padding: 10px;
+   
+    border-radius: 8px;
+  
+    position: fixed;
+    top: 17%;
+    left: 10px;
+    right: 10px ;
+ 
+  }
+  
+  .product-container-shop{
+    margin-top: 1.7rem;
+  }
+  
+  .filter-option select {
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    background-color: #fff;
+    font-size: 15px;
+    color: #555;
+    transition: all 0.3s ease;
+  }
+  
+  .filter-option select:focus {
+    border-color: #dfe4e9;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  
+    outline: none;
+  }
+  
+  .filter-option select:hover {
+    border-color: #e1e6eb;
+  }
+  
+  .filter-option select option {
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+  }
+  
+
+
+}
+
+
+@media only screen and (min-width: 800px) and (max-width: 900px){
+  .filter-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    gap: 10px;
+    padding: 10px;
+   
+    border-radius: 8px;
+  
+    position: fixed;
+    top: 11%;
+    left: 10px;
+    right: 10px ;
+ 
+  }
+  
+  .product-container-shop{
+    margin-top: 10%;
+  }
+  
+  .filter-option select {
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    background-color: #fff;
+    font-size: 15px;
+    color: #555;
+    transition: all 0.3s ease;
+  }
+  
+  .filter-option select:focus {
+    border-color: #dfe4e9;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  
+    outline: none;
+  }
+  
+  .filter-option select:hover {
+    border-color: #e1e6eb;
+  }
+  
+  .filter-option select option {
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+  }
+  
+
+
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1000px){
+  .filter-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    gap: 10px;
+    padding: 10px;
+   
+    border-radius: 8px;
+  
+    position: fixed;
+    top: 11%;
+    left: 10px;
+    right: 10px ;
+ 
+  }
+  
+  .product-container-shop{
+    margin-top: 10%;
+  }
+  
+  .filter-option select {
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    background-color: #fff;
+    font-size: 15px;
+    color: #555;
+    transition: all 0.3s ease;
+  }
+  
+  .filter-option select:focus {
+    border-color: #dfe4e9;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  
+    outline: none;
+  }
+  
+  .filter-option select:hover {
+    border-color: #e1e6eb;
+  }
+  
+  .filter-option select option {
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+  }
+  
+
+
+}

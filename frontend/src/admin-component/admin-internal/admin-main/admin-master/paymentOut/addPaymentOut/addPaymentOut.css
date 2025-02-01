@@ -1,0 +1,94 @@
+/* Add Payment Out Form Styling */
+.addpaymentout-header {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .addpaymentout-alert {
+    margin: 10px 0;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+  .addpaymentout-alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+  }
+  
+  .addpaymentout-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .addpaymentout-form-group {
+    margin-bottom: 20px;
+  }
+  
+  .addpaymentout-label {
+    font-size: 1rem;
+    color: #555;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .addpaymentout-input, .addpaymentout-textarea, .addpaymentout-select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .addpaymentout-input:focus, .addpaymentout-textarea:focus, .addpaymentout-select:focus {
+    outline: none;
+    border-color: #4caf50;
+    background-color: #fff;
+  }
+  
+  .addpaymentout-textarea {
+    height: 100px;
+    resize: vertical;
+  }
+  
+  .addpaymentout-button {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.2rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .addpaymentout-button:hover {
+    background-color: #45a049;
+  }
+  
+  .addpaymentout-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  .addpaymentout-button:active {
+    transform: scale(0.98);
+  }
+  
+  .addpaymentout-form-group:last-child {
+    margin-bottom: 0;
+  }
+  

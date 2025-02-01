@@ -1,0 +1,43 @@
+.gift-box-container {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .gift-box {
+    position: absolute;
+    top: -100px; /* Start above the screen */
+    animation: fall 9s linear forwards;
+  }
+
+  .gift-box img{
+    width: 300px;
+  }
+  
+  @keyframes fall {
+    0% {
+      top: -100px;
+    }
+    100% {
+      top: calc(100vh - 100px); /* End at the bottom of the screen */
+    }
+  }
+  
+  .welcome-message {
+    font-size: 7rem;
+    color: #333;
+    text-align: center;
+    animation: fadeIn 6s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  

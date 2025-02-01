@@ -1,0 +1,597 @@
+.adminRequired {
+  color: red;
+  font-size: 14px;
+}
+.dashboardContainer {
+  display: flex;
+  gap: 10px;
+}
+.leftsideContainer {
+  margin-top: 1rem;
+  width: 400px;
+}
+
+.rightsideContainer {
+  margin-top: 1rem;
+}
+.internalDiv1 {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px;
+}
+
+.internalDiv_Today {
+  font-weight: 600;
+  background-color: rgb(202, 202, 6);
+  padding: 10px;
+}
+
+.internalDiv2 {
+  display: flex;
+  justify-content: space-between;
+}
+.sameFor3 p {
+  font-size: 13px;
+}
+.box2internal1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box2internal2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box2internal3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.nestedinternal1 {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: rgb(24, 24, 26);
+  height: 50px;
+  width: 190px;
+  cursor: pointer;
+}
+
+.nestedinternal1 p {
+  color: white;
+}
+
+.nestedinternal2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: rgb(24, 24, 26);
+  height: 50px;
+  width: 190px;
+  cursor: pointer;
+}
+.nestedinternal2 p {
+  color: white;
+}
+
+.nestedinternal3 {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: rgb(24, 24, 26);
+  height: 50px;
+  width: 190px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.nestedinternal3 p {
+  color: white;
+}
+
+.nestedinternal4 {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: rgb(24, 24, 26);
+  height: 50px;
+  width: 190px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.nestedinternal4 p {
+  color: white;
+}
+
+.rightBox1 {
+  display: flex;
+  gap: 50px;
+}
+
+.client-due-section {
+  margin-top: 20px;
+  padding: 20px;
+
+ 
+}
+
+.duesTableContainer{
+  width: 800px;
+  max-height: 250px; /* Adjust height to your preference */
+  overflow-y: auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+}
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+ 
+  font-size: 14px;
+  color: #333333;
+}
+
+.styled-table thead {
+  background: #f4f4f4;
+}
+
+.styled-table th {
+  text-align: left;
+  padding: 12px 15px;
+  border-bottom: 2px solid #dddddd;
+  font-weight: 600;
+  color: #555555;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background: #f9f9f9;
+}
+
+.styled-table tbody tr:hover {
+  background: #f1f1f1;
+  cursor: pointer;
+}
+
+.styled-table td {
+  padding: 12px 15px;
+}
+
+.styled-table tbody tr td {
+  color: #555555;
+}
+
+.no-data-message {
+  font-size: 16px;
+  color: #999999;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Custom Modal Overlay */
+.custom-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+  z-index: 9999; /* Ensure overlay is on top */
+}
+
+/* Custom Modal Container */
+.custom-modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 4px;
+  box-sizing: border-box;
+  z-index: 10000; /* Ensure modal content is above overlay */
+  overflow: hidden; /* Prevent scrolling in modal container */
+}
+
+/* Modal Header */
+.custom-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Close Button */
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #000;
+  cursor: pointer;
+}
+
+/* Modal Body */
+.custom-modal-body-admin {
+  flex-grow: 1;
+  display: flex;
+
+  padding: 0px;
+  overflow-y: auto;
+  max-height: calc(100% - 10px);
+}
+
+.topForm {
+  display: flex;
+  width: 100%;
+  column-gap: 2rem;
+  align-content: center;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.top1 select {
+  border: 1px solid #ccc;
+  width: 250px;
+  background-color: white;
+  padding: 4px;
+}
+
+.top2 input[type="text"] {
+  padding: 4px;
+  border-radius: 1px !important;
+}
+
+.top2 input[type="text"]:focus {
+  outline: none;
+  border-bottom: 1px solid black;
+}
+
+.top3 input[type="date"] {
+  padding: 4px;
+  border-radius: 1px !important;
+  border: 1px solid #ccc;
+}
+
+.top4 input[type="text"] {
+  padding: 4px;
+  border-radius: 1px !important;
+}
+
+.top4 input[type="text"]:focus {
+  outline: none;
+  border-bottom: 1px solid black;
+}
+
+.top5 .billing-type-options {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+}
+
+.top5 .billing-type-options input[type="radio"] {
+  margin-right: 10px;
+}
+
+.middleForm {
+  display: flex;
+  width: 100%;
+  column-gap: 2rem;
+  align-content: center;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.middle1 input[type="text"] {
+  padding: 4px;
+  border-radius: 1px !important;
+  width: 250px;
+}
+
+.middle1 input[type="text"]:focus {
+  outline: none;
+  border-bottom: 1px solid black;
+}
+
+.middle2 input[type="text"] {
+  padding: 4px;
+  border-radius: 1px !important;
+}
+
+.middle2 input[type="text"]:focus {
+  outline: none;
+  border-bottom: 1px solid black;
+}
+
+.middle3 textarea {
+  height: 80px;
+}
+
+.middle4 input[type="text"] {
+  padding: 4px;
+  border-radius: 1px !important;
+}
+
+.middle4 input[type="text"]:focus {
+  outline: none;
+  border-bottom: 1px solid black;
+}
+
+.table1 {
+  padding: 4px;
+  border-radius: 1px !important;
+  width: 250px !important;
+  margin-left: 20px;
+}
+
+.table1:focus {
+  outline: none;
+  border-bottom: 1px solid black;
+}
+
+.table2 {
+  width: 100px;
+  margin-left: 2px;
+}
+
+.tableH3 {
+  padding-left: 5rem;
+  width: 200px;
+}
+.table2:focus {
+  outline: none;
+}
+
+.table3 {
+  width: 120px;
+  margin-left: 10px;
+}
+
+.table3:focus {
+  outline: none;
+}
+
+.table4 {
+  width: 120px;
+}
+
+.tableH5 {
+  padding-left: 0 !important;
+  width: 150px;
+}
+.table4:focus {
+  outline: none;
+}
+
+.table5 {
+  padding: 0px;
+  width: 120px;
+  margin-left: 5px;
+}
+
+.table5:focus {
+  outline: none;
+}
+
+.table6 {
+  padding: 4px;
+  width: 200px;
+  margin-left: 25px;
+}
+
+.table6:focus {
+  outline: none;
+}
+
+/* General Table Styling */
+
+/* Main Container for the Table */
+.table-container {
+  max-height: 600px;
+  overflow-y: auto;
+  border-radius: 8px;
+
+  padding: 20px;
+}
+
+.particulars-table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+  table-layout: fixed;
+  height: 250px;
+  margin: 0px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.particulars-table thead {
+  display: table;
+  width: 100%;
+
+  position: sticky; /* Ensures the header remains fixed */
+  top: 0; /* Sticks to the top of the container */
+  background-color: #f9f9f9; /* Add background to make it look distinct */
+  z-index: 1; /* Ensures it stays on top */
+}
+
+.particulars-table tbody {
+  display: block;
+  max-height: 200px; /* Adjust this to control scrollable height */
+  overflow-y: auto;
+}
+
+.particulars-table th {
+  background-color: #2d3b48; /* Dark Slate Color */
+  color: #fff;
+  padding: 11px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Adds subtle shadow below header */
+}
+
+/* Table Body Styling */
+.particulars-table tbody tr {
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+.particulars-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.particulars-table tbody td {
+  padding: 10px 4px;
+  vertical-align: middle;
+}
+
+/* Action Buttons Styling */
+.add-row-btn {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.add-row-btn:hover {
+  background-color: #45a049;
+}
+
+.delete-row-btn {
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.delete-row-btn:hover {
+  background-color: #e53935;
+}
+
+.invoiceFooter {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.bottomContainerAdmin{
+
+  display: flex;
+  gap: 20px;
+}
+.tableWrapper {
+  max-height: 200px; 
+  overflow-y: auto; 
+  margin-top: 10px;
+  width: 100%;
+}
+
+
+
+.modal_CustomModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal_content_adminCustom {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal_content_adminCustom h4 {
+  margin-top: 0;
+  font-size: 1.9rem;
+  display: block;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.modal_content_adminCustom strong{
+  font-family: 'Times New Roman', Times, serif;
+}
+.buttonAdminCustomOrder {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+/* Modal Background */
+.modal_CustomModal_storeorder {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding: 20px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Modal Content */
+.modal_content_adminCustomStoreOrder {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: modal-in 0.3s ease-in-out;
+}
+
+/* Modal Header */
+.modal_content_adminCustomStoreOrder h4 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Modal Paragraphs */
+.modal_content_adminCustomStoreOrder p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #555;
+}

@@ -1,0 +1,180 @@
+.add-category-form {
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #f8f8f8;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  
+    margin: 10px auto;
+}
+
+.add-category-form .inputSelect {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.add-category-form .inputSelect label {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.add-category-form .inputSelect select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.selectOption {
+    font-size: 1rem;
+}
+
+.add-category-form .subInputForm {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px;
+    margin-top: 1%;
+}
+
+.add-category-form .subInputForm label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.add-category-form .subInputForm input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.add-category-form .adminbtn {
+    display: block;
+    margin: 20px auto;
+    background-color: rgb(22, 153, 22);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.add-category-form .adminbtn:active {
+    transform: scale(0.95);
+}
+
+.allCategory {
+    margin-top: 2rem;
+    padding: 0 10px;
+}
+
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    animation: slideIn 0.5s ease, stayVisible 60s ease forwards, fadeOut 0.5s ease 60s forwards;
+}
+
+.toast-success {
+    background-color: #abb1ab;
+}
+
+.toast-error {
+    background-color: #ee746c;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-50%) translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes stayVisible {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+/* Responsive table adjustments */
+@media (max-width: 768px) {
+    .table-striped {
+      font-size: 12px;
+    }
+  
+    .table-striped th, .table-striped td {
+      padding: 8px;
+    }
+
+    .saveBtnCancelMobile{
+        display: flex;
+    }
+  }
+  
+  /* Sidebar open handling (you can adjust this based on your sidebar state) */
+  body.sidebar-open .container {
+    padding-left: 250px;
+    transition: padding-left 0.3s ease-in-out;
+  }
+  
+  @media (max-width: 768px) {
+    body.sidebar-open .container {
+      padding-left: 0;
+    }
+  }
+  
+  /* Responsive Sidebar Handling */
+  @media (max-width: 768px) {
+    .container {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  
+    .add-category-form,
+    .allCategory {
+      padding: 10px;
+    }
+
+
+  }
+

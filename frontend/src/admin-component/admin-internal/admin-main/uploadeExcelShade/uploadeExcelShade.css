@@ -1,0 +1,171 @@
+.admin-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden; /* Prevent scrollbars */
+  }
+  
+  .admin-container > .upload-shade-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .admin-container > AdminHeader {
+    width: 250px; /* Adjust this based on your header width */
+    background-color: #f4f4f4; /* Adjust as per your design */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  input[type="file"] {
+    margin-top: 10px;
+  }
+  
+  .upload-button {
+    margin-top: 15px;
+  }
+  
+  .message {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .message.success {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  /* General Container Styles */
+.colors-table-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Table Styles */
+  .colors-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .colors-table th,
+  .colors-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .colors-table th {
+    background-color: #1c5da1;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  
+  .colors-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .colors-table tr:hover {
+    background-color: #ddd;
+  }
+  
+  /* Scrollable Table */
+  .table-scrollable {
+    overflow-x: auto;
+  }
+  
+  /* Input Field Styles */
+  input[type="text"],
+  .hex-code-input,
+  .shade-input,
+  .intensity-input,
+  .mixed-color-hex-input {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  
+  /* Icon Styles */
+  .icon-m {
+    cursor: pointer;
+    margin-right: 8px;
+  }
+  
+  .edit-icon-m {
+    color: #007bff;
+  }
+  
+  .delete-icon-m {
+    color: #ff4d4d;
+  }
+  
+  /* Pagination Controls */
+  .pagination-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .pagination-controls button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .pagination-controls button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pagination-controls button:disabled {
+    background-color: #d6d6d6;
+    color: #8c8c8c;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+  
+  .prev-button,
+  .next-button {
+    min-width: 100px;
+  }
+  
+  /* Error Message */
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  /* No Data Message */
+  .no-data-message {
+    color: #555;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  

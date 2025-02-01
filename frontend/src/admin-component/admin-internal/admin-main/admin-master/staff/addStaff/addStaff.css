@@ -1,0 +1,109 @@
+
+
+
+
+/* Form Grid Layout for Better Alignment */
+.addstaff-form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Two columns for alignment */
+    gap: 15px;
+    width: 100%;
+}
+
+.addstaff-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #555;
+    width: 100%;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+    background: #f9f9f9;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
+    background: #ffffff;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+.addstaff-submit-button {
+    display: inline-block; /* Ensures it's treated as an inline element */
+    padding: 8px 16px; /* Smaller padding for a compact look */
+    font-size: 14px; /* Slightly smaller font size */
+    font-weight: bold; /* Optional: makes the text stand out */
+    color: #fff; /* Button text color */
+    background-color: #007bff; /* Primary blue background */
+    border: none; /* Removes default border */
+    border-radius: 4px; /* Slightly rounded corners */
+    cursor: pointer; /* Pointer cursor for button */
+    transition: background-color 0.3s ease; /* Smooth color transition */
+    margin-left: 50px;
+    margin-top: 55px;
+    height: 70px;
+    
+}
+
+.addstaff-submit-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.addstaff-submit-button:active {
+    background-color: #003f7f; /* Even darker shade when clicked */
+}
+
+/* Error and Success Messages */
+.addstaff-error-message,
+.addstaff-success-message {
+    font-size: 1rem;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.addstaff-error-message {
+    color: #d32f2f;
+    background: #ffebee;
+    border: 1px solid #ef9a9a;
+}
+
+.addstaff-success-message {
+    color: #388e3c;
+    background: #e8f5e9;
+    border: 1px solid #a5d6a7;
+}
+
+/* Media Query for Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .addstaff-form {
+        grid-template-columns: 1fr; /* Single column for smaller screens */
+    }
+
+    .addstaff-submit-button {
+        width: 100%;
+    }
+}

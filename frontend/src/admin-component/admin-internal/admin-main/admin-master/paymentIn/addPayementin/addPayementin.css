@@ -1,0 +1,69 @@
+.form-title-addpayment-m {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #333;
+    margin-top: 50px;
+  }
+  
+  .payment-form-addpayment-m {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1rem;
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 70px;
+  }
+  
+  .form-group-addpayment-m {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-label-addpayment-m {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-input-addpayment-m,
+  .form-textarea-addpayment-m,
+  .form-input-addpayment-m:focus {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .form-textarea-addpayment-m {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .form-input-addpayment-m:focus,
+  .form-textarea-addpayment-m:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
+  }
+  
+  .submit-button-addpayment-m {
+    padding: 0.75rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: center;
+    margin-left: 70px;
+    width: 220px !important;
+    margin-top: 200px;
+  }
+  
+  .submit-button-addpayment-m:hover {
+    background-color: #0056b3;
+  }
+  

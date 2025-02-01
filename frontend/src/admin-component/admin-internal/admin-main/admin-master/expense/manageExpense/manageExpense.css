@@ -1,0 +1,103 @@
+/* Overall layout */
+.manageexpense-m {
+    padding: 20px;
+    background-color: #f4f7fa;
+    min-height: 100vh;
+  }
+  
+  .manageexpense-m {
+    margin-top: 30px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .manageexpense-m h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Error Message */
+  .error-m {
+    text-align: center;
+    color: #d9534f;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+
+  
+  
+
+  
+  .type-filter-m {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 14px;
+  }
+  
+  /* Table styles */
+  .expense-table-m {
+    margin: 0 auto;
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  .expense-table-content-m {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  /* Table Header */
+  .table-header-m {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .table-header-m th {
+    padding: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* Table Body */
+  .expense-table-content-m td {
+    padding: 12px;
+    text-align: center;
+    color: #555;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  /* Alternate Row Colors */
+  .expense-table-content-m tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+  }
+  
+  .expense-table-content-m tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+  }
+  
+  /* Hover Effect */
+  .expense-table-content-m tbody tr:hover {
+    background-color: #e9f5ff;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* No Expenses Message */
+  .no-expenses-m {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+  }
+  

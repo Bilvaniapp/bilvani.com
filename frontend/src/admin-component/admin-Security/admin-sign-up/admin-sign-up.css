@@ -1,0 +1,18 @@
+
+.input-groups .input-btn-admin{
+    padding: 6px 25px;
+  border: 1px solid red;
+  background-color: #b31b00;
+  color: rgb(253, 251, 251);
+  border-radius: 50px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: block;
+  margin: 0 auto;
+}
+
+.adminImageSingup{
+  width: 350px !important;
+  height: 700px !important;
+}

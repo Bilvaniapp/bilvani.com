@@ -1,0 +1,54 @@
+.modal-manage-purchase-m {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Ensure the modal is above other elements */
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: auto; /* Allow scrolling if content is too long */
+    max-height: 100vh; /* Prevent the modal from exceeding the viewport height */
+    max-width: 100%; /* Prevent the modal from exceeding the viewport width */
+    width: 100%; /* Set a default width */
+  }
+  
+  .modal-content-purchase-m {
+    padding: 20px;
+  }
+  
+  .table-container {
+    overflow-x: auto; /* Add horizontal scrolling for the table if necessary */
+  }
+  
+  .save-btn-purchase-m,
+  .cancel-btn-purchase-m {
+    margin: 10px 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .save-btn-purchase-m {
+    background-color: #4caf50; /* Green */
+    color: white;
+  }
+  
+  .cancel-btn-purchase-m {
+    background-color: #f44336; /* Red */
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .modal-manage-purchase-m {
+      width: 90%; /* Adjust modal width for smaller screens */
+      max-height: 80vh;
+    }
+  
+    .modal-content-purchase-m {
+      padding: 10px;
+    }
+  }
+  

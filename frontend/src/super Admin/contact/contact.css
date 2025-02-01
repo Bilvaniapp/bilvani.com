@@ -1,0 +1,87 @@
+/* Admin Contact Page Styles */
+
+.admincontact-header {
+    background-color: #f4f4f4;
+    border-bottom: 2px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .admincontact-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .admincontact-table thead {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .admincontact-table th,
+  .admincontact-table td {
+    padding: 1rem;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  .admincontact-table th {
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  .admincontact-table tbody tr:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .admincontact-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .admincontact-empty-row {
+    text-align: center;
+    color: #888;
+    font-size: 18px;
+    font-style: italic;
+  }
+  
+  .admincontact-action {
+    text-align: center;
+  }
+  
+  .admincontact-delete-icon {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #e74c3c;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+  }
+  
+  .admincontact-delete-icon:hover {
+    background-color: rgba(231, 76, 60, 0.1);
+  }
+  
+  .admincontact-delete-icon:focus {
+    outline: none;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .admincontact-table {
+      font-size: 0.9rem;
+    }
+  
+    .admincontact-table th,
+    .admincontact-table td {
+      padding: 0.5rem;
+    }
+  }
+  

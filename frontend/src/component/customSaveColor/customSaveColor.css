@@ -1,0 +1,95 @@
+
+.color-component-container {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.display-color-container{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.color-item {
+  height: 150px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 20px;
+}
+
+.container-color{
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+}
+.mixed-color-box {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+
+.mixed-color-heading {
+  margin-bottom: 10px;
+}
+
+
+.color-list {
+  margin-bottom: 10px;
+}
+
+.place-order-color{
+  border: 1px solid #ccc;
+  transition:  transfrom o.9s ease;
+}
+
+.place-order-color:active{
+  transform: scale(0.95);
+}
+/* Styles for the selected color information */
+.selected-color-info {
+  margin-bottom: 5px;
+}
+
+/* Styles for the no colors message */
+.no-colors-message {
+  margin-top: 20%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the saved colors title */
+.saved-colors-title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+/* customSaveColor.css */
+
+/* Styles for the color box */
+.color-box {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+/* Additional styles can be added as needed */
