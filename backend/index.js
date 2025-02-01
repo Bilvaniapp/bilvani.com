@@ -46,9 +46,13 @@ require('./admin_Monogdb/storeOrder/storeOrderMongo');
 require('./admin_Monogdb/adminDashboard/addstaff/addstaffMongo');
 
 app.use(cors({
-    origin: 'http://localhost:5173', 
-    credentials: true 
-  }));
+    origin: function (origin, callback) {
+       
+        if (!origin) return callback(null, true);
+        return callback(null, origin);
+    },
+    credentials: true,
+}));
 app.use(body.json())
 
 
