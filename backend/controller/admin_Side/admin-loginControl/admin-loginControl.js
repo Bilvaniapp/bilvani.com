@@ -37,7 +37,27 @@ const adminloginControl = async (req, res) => {
  
     const token = user.token;
 
-   
+    // Set the token and category in cookies
+    res.cookie('token', token, {
+      httpOnly: true,
+      secure: true, // ensure it's only secure in production
+      sameSite: 'None',
+      path: '/',
+    });
+
+    res.cookie('category', category, {
+      httpOnly: true,
+      secure: true,
+      sameSite: 'None',
+      path: '/',
+    });
+
+    res.cookie('storeAddress', storeAddress, {
+      httpOnly: true,
+      secure: true,
+      sameSite: 'None',
+      path: '/',
+    });
 
     // Send response with success message
     res.status(200).json({
