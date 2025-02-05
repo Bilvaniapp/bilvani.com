@@ -40,14 +40,14 @@ const adminloginControl = async (req, res) => {
     // Set the token and category in cookies
     res.cookie('token', token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production', // ensure it's only secure in production
+      secure: true, 
       sameSite: 'None',
       path: '/',
     });
 
     res.cookie('category', category, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
+     secure: true,
       sameSite: 'None',
       path: '/',
     });
