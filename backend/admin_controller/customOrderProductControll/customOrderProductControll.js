@@ -558,7 +558,7 @@ exports.getMachineApi = async (req, res) => {
         message: 'StoreOrder data fetched and updated successfully.',
         type: 'StoreOrder', 
         colorData: {
-          storeOrders: [{
+          products: [{
             id: storeOrder._id, 
             shade: storeOrder.shade,
             mixColor: storeOrder.mixColor,
