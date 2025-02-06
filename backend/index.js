@@ -10,7 +10,9 @@ const body = require('body-parser');
 
 require("dotenv").config();
 
-app.use(bodyParser.json());
+app.use(bodyParser.json({ limit: 'Infinity' }));
+app.use(bodyParser.urlencoded({ limit: 'Infinity', extended: true }));
+
 app.use(cookieParser());
 
 ////! All import of the Mongodb
@@ -103,7 +105,11 @@ const storage = multer.diskStorage({
         cb(null, Date.now() + path.extname(file.originalname)); // Filename with timestamp
     }
 });
-const upload = multer({ storage: storage });
+const upload = multer({ 
+    storage: storage,
+    limits: { fileSize: Infinity } // No file size limit
+});
+
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 app.use('/create-product', upload.array('images', 3), Product);
