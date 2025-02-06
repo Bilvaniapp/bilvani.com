@@ -48,7 +48,7 @@ require('./admin_Monogdb/storeOrder/storeOrderMongo');
 require('./admin_Monogdb/adminDashboard/addstaff/addstaffMongo');
 
 app.use(cors({
-    origin: 'https://bilvani.com', 
+    origin: '*', 
     credentials: true 
   }));
 app.use(body.json())
