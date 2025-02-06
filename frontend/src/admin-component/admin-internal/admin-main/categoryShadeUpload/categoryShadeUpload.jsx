@@ -355,7 +355,7 @@ const CategoryShade = () => {
                 </td>
                 <td className="product-image-Tarsh">
                   <img
-                    src={`/uploads/${product.images}`}
+                    src={`${BASE_URL}${product.images[0]}`}
                     alt={product.name}
                     className="product-image-img-Tarsh"
                   />
@@ -450,7 +450,8 @@ const CategoryShade = () => {
           {formData.images && !(formData.images instanceof File) ? (
             // Display the current image if no new file is chosen
             <img
-              src={`/uploads/${formData.images}`}
+            src={`${BASE_URL}${formData.images[0]}`}
+             
               alt={formData.name}
               className="image-preview-Tarsh"
               style={{ maxWidth: "100%", maxHeight: "200px", marginBottom: "8px" }}
