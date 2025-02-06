@@ -46,7 +46,7 @@ require('./admin_Monogdb/storeOrder/storeOrderMongo');
 require('./admin_Monogdb/adminDashboard/addstaff/addstaffMongo');
 
 app.use(cors({
-    origin: 'https://bilvani.com', 
+    origin: 'http://localhost:5173', 
     credentials: true 
   }));
 app.use(body.json())
@@ -97,14 +97,14 @@ const StaffManage = require('./admin_routes/adminDashboard/addStaff/addStaffrout
 // Multer configuration
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, path.join(__dirname, '../frontend/public/uploads')); // Save files to the correct folder
+        cb(null, path.join(__dirname, 'uploads')); // Save files to the correct folder
     },
     filename: function (req, file, cb) {
         cb(null, Date.now() + path.extname(file.originalname)); // Filename with timestamp
     }
 });
 const upload = multer({ storage: storage });
-
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 app.use('/create-product', upload.array('images', 3), Product);
 app.use('/api/category/shade', upload.array('images', 2), setCategoryShade);
