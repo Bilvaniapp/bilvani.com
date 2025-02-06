@@ -518,20 +518,21 @@ exports.fetchAndVerifyProduct = async (req, res) => {
   }
 
   try {
-      // Fetch the product by permanentId
-      const product = await Product.findOne({ permanentId });
+      // Fetch products by permanentId (returns an array)
+      const products = await Product.find({ permanentId });
 
-      if (!product) {
+      if (products.length === 0) {
           return res.status(404).json({ success: false, message: "Product not found." });
       }
 
       // If found, return the product data
-      return res.status(200).json({ success: true, data: product });
+      return res.status(200).json({ success: true, data: products });
   } catch (error) {
       console.error("Error fetching product:", error);
       return res.status(500).json({ success: false, message: "Internal server error." });
   }
 };
+
 
 
 
