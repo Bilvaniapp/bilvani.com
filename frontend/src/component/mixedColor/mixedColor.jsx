@@ -166,7 +166,9 @@ const MixedColor = () => {
                                   height: "120px",
                                   borderRadius: "20px",
                                 }}
-                              ></div>
+                              > </div>
+                              <p>Color Code: {color.colorCode} </p>
+
                             </>
                           )}
 
