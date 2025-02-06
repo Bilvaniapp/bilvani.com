@@ -10,8 +10,8 @@ const body = require('body-parser');
 
 require("dotenv").config();
 
-app.use(bodyParser.json({ limit: 'Infinity' }));
-app.use(bodyParser.urlencoded({ limit: 'Infinity', extended: true }));
+app.use(bodyParser.json({ limit: '1gb' }));  // Increase limit
+app.use(bodyParser.urlencoded({ limit: '1gb', extended: true }));
 
 app.use(cookieParser());
 
@@ -48,9 +48,23 @@ require('./admin_Monogdb/storeOrder/storeOrderMongo');
 require('./admin_Monogdb/adminDashboard/addstaff/addstaffMongo');
 
 app.use(cors({
-    origin: '*', 
-    credentials: true 
-  }));
+    origin: '*',  // Allow all origins
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
+// Manually add CORS headers for file uploads
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    
+    if (req.method === 'OPTIONS') {
+        return res.sendStatus(200);
+    }
+    next();
+});
+
 app.use(body.json())
 
 
@@ -105,9 +119,9 @@ const storage = multer.diskStorage({
         cb(null, Date.now() + path.extname(file.originalname)); // Filename with timestamp
     }
 });
-const upload = multer({ 
+const upload = multer({
     storage: storage,
-    limits: { fileSize: Infinity } // No file size limit
+    limits: { fileSize: 1024 * 1024 * 1024 } // 1GB limit per file
 });
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
