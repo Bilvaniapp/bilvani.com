@@ -10,8 +10,9 @@ const body = require('body-parser');
 
 require("dotenv").config();
 
-app.use(bodyParser.json({ limit: '1gb' }));  // Increase limit
-app.use(bodyParser.urlencoded({ limit: '1gb', extended: true }));
+app.use(bodyParser.json({ limit: "1000mb" })); 
+app.use(bodyParser.urlencoded({ limit: "1000mb", extended: true }));
+
 
 app.use(cookieParser());
 
