@@ -72,10 +72,10 @@ const SelectedCategoryToColor = () => {
   };
 
   const handleSubmit = () => {
-   
-
     // Find the selected client details
-    const selectedClient = clients.find((client) => client._id === selectedStore);
+    const selectedClient = clients.find(
+      (client) => client._id === selectedStore
+    );
 
     if (selectedClient) {
       // Save the selected store, billing address, city, and state to localStorage
@@ -86,7 +86,6 @@ const SelectedCategoryToColor = () => {
       };
 
       localStorage.setItem("selectedStore", JSON.stringify(storeDetails)); // Save the full store details
-      
     }
 
     console.log("Selected category:", selectedCategory);
@@ -161,7 +160,7 @@ const SelectedCategoryToColor = () => {
                   />
                   <div className="category-details">
                     <img
-                      src={`/uploads/${product.images[0]}`}
+                     src={`${BASE_URL}${product.images[0]}`}
                       alt={product.name}
                     />
                     <div className="category-info">
@@ -192,7 +191,7 @@ const SelectedCategoryToColor = () => {
           </button>
         </div>
       </div>
-          <Footer/>
+      <Footer />
     </>
   );
 };
