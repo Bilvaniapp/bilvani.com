@@ -29,28 +29,25 @@ const Orders = () => {
     useEffect(() => {
         const fetchOrders = async () => {
             try {
-                // Fetch data from the custom order API
-                const customOrderResponse = await axios.get(`${BASE_URL}/api/bilvani/fetch/data/user`, { withCredentials: true });
-
-                // Handle the custom order API response
-                if (customOrderResponse.status === 200 && 
-                    customOrderResponse.data.success && 
-                    customOrderResponse.data.data) { 
-                    setOrders([customOrderResponse.data.data]); 
-                } else if (customOrderResponse.status === 'rejected') {
-                    console.error('Error fetching from custom order API:', customOrderResponse.reason);
+                // Fetch product data using the correct API route
+                const response = await axios.get(`${BASE_URL}/api/bilvani/fetch/data/user`, { withCredentials: true });
+    
+                if (response.status === 200 && response.data.success) {
+                    setOrders(response.data.data); 
                 } else {
                     setOrders([]); 
                 }
             } catch (error) {
-                setError('Error fetching orders: ' + (error.response?.data?.error || error.message));
+                console.error('Error fetching orders:', error);
+                setOrders([]);
             } finally {
                 setLoading(false);
             }
         };
-
+    
         fetchOrders();
     }, []);
+    
 
     if (loading) return <><Loader /></>;
     if (error) return <div className="error">Error: {error}</div>;
@@ -60,7 +57,7 @@ const Orders = () => {
             <HomePage />
             <div className="container">
                 <div className='order-display-container'>
-                    <h1>My Orders</h1>
+                    <h2>My Orders</h2>
                     {orders.length === 0 ? (
                         <div className="no-orders">
                             <img src='/no-order-image.png' alt="No Orders" className="no-orders-image img-fluid" />
@@ -74,10 +71,10 @@ const Orders = () => {
                                             <div 
                                                 className="product-card"
                                                 key={order._id}
-                                                onClick={() => {
-                                                    window.location.href = `/view-custom-order/exploreOrder==true&refrence==Bilvani/${order._id}`;
+                                                // onClick={() => {
+                                                   // window.location.href = `/view-custom-order/exploreOrder==true&refrence==Bilvani/${order._id}`;
                                                     
-                                                }}
+                                                //}}
                                                 style={{ cursor: 'pointer' }}
                                             >
                                                 <div className="product-left">
