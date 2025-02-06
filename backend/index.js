@@ -47,23 +47,34 @@ require('./admin_Monogdb/customOrderProductMongo/customOrderProductMongo');
 require('./admin_Monogdb/storeOrder/storeOrderMongo');
 require('./admin_Monogdb/adminDashboard/addstaff/addstaffMongo');
 
+const cors = require('cors');
+
 app.use(cors({
-    origin: '*',  // Allow all origins
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    origin: ['https://bilvani.com', 'https://api.bilvani.com'], 
+    credentials: true,  
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
-// Manually add CORS headers for file uploads
+// Handle Preflight Requests Manually
 app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-    
+    const allowedOrigins = ['https://bilvani.com', 'https://api.bilvani.com'];
+    const origin = req.headers.origin;
+
+    if (allowedOrigins.includes(origin)) {
+        res.setHeader('Access-Control-Allow-Origin', origin); 
+        res.setHeader('Access-Control-Allow-Credentials', 'true');
+        res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+        res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    }
+
     if (req.method === 'OPTIONS') {
         return res.sendStatus(200);
     }
+    
     next();
 });
+
 
 app.use(body.json())
 
