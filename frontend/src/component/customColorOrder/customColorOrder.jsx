@@ -86,7 +86,7 @@ const customColorOrder = () => {
         const { orderId, amount, currency } = response.data;
 
         const options = {
-          key: "rzp_test_4bOOuV1CTln2bE", // Razorpay test key
+          key: "rzp_live_q06hnW3knyeKv4", // Razorpay test key
           amount: amount,
           currency: currency,
           name: "BILVANI ASK YOUR SHADE",
@@ -165,11 +165,7 @@ const customColorOrder = () => {
               console.log("Error sending order details to backend:", error);
             }
           },
-          prefill: {
-            name: formData.customerFirstName, // Use formData for customer details
-            email: formData.email,
-            contact: formData.phoneNumber,
-          },
+        
           theme: {
             color: "#3399cc",
           },
