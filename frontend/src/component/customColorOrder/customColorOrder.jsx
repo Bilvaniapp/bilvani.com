@@ -480,9 +480,15 @@ const customColorOrder = () => {
     setEnteredOtp(e.target.value);
   };
 
+  const [otpError, setOtpError] = useState("");
+
   const handleVerifyOtp = async () => {
     try {
       // Retrieve selectedStore from localStorage
+      if (enteredOtp !== otp) { // Check if entered OTP matches
+        setOtpError("Invalid OTP. Please try again.");
+        return; 
+      }
       const selectedStore =
         JSON.parse(localStorage.getItem("selectedStore")) || {};
 
@@ -540,6 +546,8 @@ const customColorOrder = () => {
         productDetails: productDetailsToSave,
       });
 
+     
+
       // Send the OTP and order details to the backend
       const response = await axios.post(
         `${BASE_URL}/api/bilvani/verify/otp/order/confirmed`,
@@ -564,6 +572,16 @@ const customColorOrder = () => {
       );
     }
   };
+
+   const closeOtpModal = () => {
+        setShowOtpModal(false);
+        setOtpError(""); // Reset OTP error when closing the modal
+        setEnteredOtp(""); // Reset entered OTP when closing the modal 
+      };
+
+      const isOnlinePaymentDisabled = isCouponApplied
+    ? discountedPrice >= 1 && discountedPrice <= 10
+    : totalPrice >= 1 && totalPrice <= 10;
 
   return (
     <div className="payment-address-main">
@@ -784,6 +802,7 @@ const customColorOrder = () => {
                         <button
                           className="btn codbtnCss"
                           onClick={createPayment}
+                          disabled={isOnlinePaymentDisabled} 
                         >
                           {" "}
                           {/* Call createPayment for online payment */}
@@ -956,13 +975,15 @@ const customColorOrder = () => {
         {showOtpModal && (
           <div className="modal_cod">
             <div className="modal-content_cod">
-              <span className="close" onClick={() => setShowOtpModal(false)}>
+              <span className="close" onClick={closeOtpModal}>
                 &times;
               </span>
-              <h3>Enter OTP</h3>
+              <p>Enter OTP to confirm your COD order</p>
               <p className="generated-otp">
                 Your OTP: <strong>{otp}</strong>
               </p>
+
+             
               <input
                 type="text"
                 value={enteredOtp}
@@ -970,34 +991,37 @@ const customColorOrder = () => {
                 placeholder="Enter OTP"
                 className="otp-input"
               />
-              <button className="btn" onClick={handleVerifyOtp}>
+              {otpError && <div className="error-message">{otpError}</div>}
+              <button className="btn orderOtpConfirm" onClick={handleVerifyOtp}>
                 Order Confirmed
               </button>
             </div>
           </div>
         )}
 
-        <div className="price_details">
-          <h3>Price details</h3>
-          <hr />
-          <div className="price-details">
-            <p>
-              <strong>Items:</strong> {itemCount}
-            </p>
-            <p>
-              <strong>Total Price:</strong> ₹{totalPrice}
-            </p>
-            {discountPercentage && (
-              <p>
-                <strong>Discount Applied ({discountPercentage}%):</strong> -₹
-                {couponDiscountAmount}
-              </p>
-            )}
-            <p>
-              <strong>Payable Amount:</strong> ₹{discountedPrice || totalPrice}
-            </p>
-          </div>
-        </div>
+<div className="price_details">
+  <h3>Price details</h3>
+  <hr />
+  <div className="price-details">
+    <p>
+      <strong>Items:</strong> {itemCount}
+    </p>
+    <p>
+      <strong>Total Price:</strong> ₹{totalPrice}
+    </p>
+    {isCouponApplied && discountPercentage > 0 && (
+      <p>
+        <strong>Discount Applied ({discountPercentage}%):</strong> -₹
+        {couponDiscountAmount}
+      </p>
+    )}
+    <p>
+      <strong>Payable Amount:</strong> ₹{isCouponApplied ? discountedPrice.toFixed(2) : totalPrice}
+    </p>
+  </div>
+</div>
+
+
       </div>
     </div>
   );
