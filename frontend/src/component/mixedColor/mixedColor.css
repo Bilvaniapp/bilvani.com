@@ -70,6 +70,7 @@
   .mainBock-code {
     width: 100%; /* Almost full width for mobile */
     padding: 10px;
+    margin-top: 2rem;
   }
 
   .btn-save-color {
@@ -92,6 +93,7 @@
   .mainBock-code {
     width: 100%; /* Full width */
     padding: 8px;
+    margin-top: 9rem;
   }
 
   .btn-save-color {
