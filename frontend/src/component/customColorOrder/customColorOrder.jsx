@@ -111,9 +111,6 @@ const customColorOrder = () => {
                 storeAddress = `${selectedStore.billingAddress}, ${selectedStore.city}, ${selectedStore.state}`;
               }
               const userphoneNumber = orders[0]?.phoneNumber;
-              const userName = `${orders[0]?.customerFirstName || ''} ${orders[0]?.customerLastName || ''}`.trim();
-
-              
               // Prepare the order details to be sent to the backend
               const productDetailsData = {
                 name: productDetails.title,
@@ -134,8 +131,7 @@ const customColorOrder = () => {
                 userAddress: allAddresses,
                 orderComplete: false,
                 orderStatus: "accepted",
-                phoneNumber:userphoneNumber,
-                userName:userName
+                phoneNumber:userphoneNumber
               };
 
               // Send order details for payment verification
@@ -165,7 +161,7 @@ const customColorOrder = () => {
               console.log("Error sending order details to backend:", error);
             }
           },
-        
+          
           theme: {
             color: "#3399cc",
           },
@@ -186,9 +182,6 @@ const customColorOrder = () => {
     }
   };
 
-
-
-  
   const handleRadioChange = (index) => {
     setSelectedOrderIndex(index);
     setFormData(orders[index]);
@@ -496,8 +489,6 @@ const customColorOrder = () => {
         return `${order.address}, ${order.district}, ${order.state} - ${order.pincode}`;
       });
 
-      const userName = `${orders[0]?.customerFirstName || ''} ${orders[0]?.customerLastName || ''}`.trim();
-
       const userphoneNumber = orders[0]?.phoneNumber;
       // Initialize storeAddress as empty string in case selectedStore is not present
       let storeAddress = "";
@@ -540,7 +531,6 @@ const customColorOrder = () => {
         orderComplete: false, 
         orderStatus: "in progress",
         phoneNumber:userphoneNumber,
-        userName:userName
       };
 
       // Send the OTP and order details to the backend
