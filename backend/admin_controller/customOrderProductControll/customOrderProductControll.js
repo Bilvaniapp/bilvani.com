@@ -65,6 +65,9 @@ exports.fetchOtpData = async (req, res) => {
   }
 };
 
+
+
+
 exports.verifyCodOtp = async (req, res) => {
   try {
     const { otp, productDetails } = req.body; // Destructure OTP and product details
@@ -123,9 +126,12 @@ exports.verifyCodOtp = async (req, res) => {
   }
 };
 
+
+
+
 const instance = new Razorpay({
-  key_id: "rzp_live_q06hnW3knyeKv4", 
-  key_secret: "JjaqZzrd16TmZ8baFtqARxih"
+  key_id: "rzp_live_q06hnW3knyeKv4", // Replace with your Razorpay Key ID
+  key_secret: "JjaqZzrd16TmZ8baFtqARxih", // Replace with your Razorpay Key Secret
 });
 
 // Create Razorpay Order
@@ -177,7 +183,7 @@ exports.verifyPayment = async (req, res) => {
 
     // Generate the expected signature using the key secret
     const expectedSignature = crypto
-      .createHmac("sha256", "JjaqZzrd16TmZ8baFtqARxih") // Replace with your Razorpay secret
+      .createHmac("sha256", "lpoFpmf5F9xYNViH2SiE6pcr") // Replace with your Razorpay secret
       .update(body)
       .digest("hex");
 
