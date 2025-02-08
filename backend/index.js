@@ -50,11 +50,39 @@ require('./admin_Monogdb/adminDashboard/addstaff/addstaffMongo');
 
 
 
+
+const allowedOrigins = ['https://bilvani.com', 'https://api.bilvani.com']; // ✅ Set allowed domains
+
 app.use(cors({
-    origin: ['https://bilvani.com', 'https://api.bilvani.com'], 
-    credentials: true,  
-   
+    origin: function (origin, callback) {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, origin);
+        } else {
+            callback(new Error('CORS not allowed'));
+        }
+    },
+    credentials: true, 
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
 }));
+
+
+app.use((req, res, next) => {
+    const origin = req.headers.origin;
+    
+    if (allowedOrigins.includes(origin)) {
+        res.setHeader('Access-Control-Allow-Origin', origin);
+        res.setHeader('Access-Control-Allow-Credentials', 'true');
+        res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+        res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    }
+
+    if (req.method === 'OPTIONS') {
+        return res.sendStatus(200);
+    }
+    
+    next();
+});
 
 
 
