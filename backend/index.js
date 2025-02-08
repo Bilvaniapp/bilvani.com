@@ -49,16 +49,20 @@ require('./admin_Monogdb/storeOrder/storeOrderMongo');
 require('./admin_Monogdb/adminDashboard/addstaff/addstaffMongo');
 
 
-const allowedOrigins = ['https://bilvani.com', 'https://api.bilvani.com'];
+const allowedOrigins = [
+    'https://bilvani.com', 
+    'https://www.bilvani.com', // ✅ Added 'www' subdomain
+    'https://api.bilvani.com'
+];
 
 app.use(cors({
     origin: function (origin, callback) {
-        console.log("Incoming request from origin:", origin); // ✅ Debugging log
+        console.log("Incoming request from origin:", origin);
 
         if (!origin || allowedOrigins.includes(origin)) {
-            callback(null, true); // ✅ Allow requests if origin is undefined or in the allowed list
+            callback(null, true);
         } else {
-            console.error("Blocked by CORS:", origin); // ✅ Log blocked origins
+            console.error("Blocked by CORS:", origin);
             callback(new Error('CORS not allowed'));
         }
     },
@@ -67,7 +71,7 @@ app.use(cors({
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
-// ✅ Fallback CORS handling
+// ✅ Fallback CORS handling (for additional safety)
 app.use((req, res, next) => {
     const origin = req.headers.origin;
     
