@@ -65,18 +65,20 @@ exports.fetchOtpData = async (req, res) => {
   }
 };
 
-
-
-
 exports.verifyCodOtp = async (req, res) => {
   try {
-    const { otp, productDetails } = req.body; // Destructure OTP and product details
-    const permanentId = req.cookies.permanentId; // Get permanentId from cookies
+    const { otp, productDetails } = req.body;
+    const permanentId = req.cookies?.permanentId;
 
+    // Validate required fields
     if (!permanentId) {
-      return res
-        .status(400)
-        .json({ error: "permanentId is required in cookies" });
+      return res.status(400).json({ error: "permanentId is required in cookies" });
+    }
+    if (!otp) {
+      return res.status(400).json({ error: "OTP is required" });
+    }
+    if (!productDetails || typeof productDetails !== "object") {
+      return res.status(400).json({ error: "Invalid product details" });
     }
 
     // Validate OTP from the database
@@ -88,30 +90,29 @@ exports.verifyCodOtp = async (req, res) => {
 
     // Delete OTP after successful validation
     await Otp.deleteOne({ userId: permanentId, otp });
-    
-      // Fetch the first storeAddress from any Signup record (no identifier)
+
+    // Fetch the first storeAddress from any Signup record
+    let finalStoreAddress = productDetails.storeAddress;
+
+    if (!finalStoreAddress) {
       const signupRecords = await Signup.find({});
-
-      if (!signupRecords.length) {
-        return res.status(400).json({ error: "No Signup records found" });
+      if (signupRecords.length > 0) {
+        const storeRecord = signupRecords.find(record => record.storeAddress);
+        if (storeRecord) {
+          finalStoreAddress = storeRecord.storeAddress;
+        }
       }
-  
-      // Find the first record with storeAddress
-      const storeAddress = signupRecords.find(record => record.storeAddress)?.storeAddress;
-  
-      if (!storeAddress) {
-        return res.status(400).json({ error: "Store address not found in any Signup record" });
-      }
-  
-      // Check if storeAddress is provided in productDetails; if not, use the one from Signup
-      const finalStoreAddress = productDetails.storeAddress || storeAddress;
+    }
 
+    if (!finalStoreAddress) {
+      return res.status(400).json({ error: "Store address not found" });
+    }
 
     // Save product details to the database
     const product = new Product({
       ...productDetails,
       permanentId: permanentId,
-      storeAddress:finalStoreAddress,
+      storeAddress: finalStoreAddress,
       reasonReject: " ",
     });
 
@@ -122,9 +123,13 @@ exports.verifyCodOtp = async (req, res) => {
       product,
     });
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    console.error("Error processing OTP verification:", error);
+    res.status(500).json({ error: "Internal Server Error" });
   }
 };
+
+
+
 
 
 
