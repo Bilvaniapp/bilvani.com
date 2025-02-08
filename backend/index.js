@@ -49,29 +49,32 @@ require('./admin_Monogdb/storeOrder/storeOrderMongo');
 require('./admin_Monogdb/adminDashboard/addstaff/addstaffMongo');
 
 
-
-
-const allowedOrigins = ['https://bilvani.com', 'https://api.bilvani.com']; // ✅ Set allowed domains
+const allowedOrigins = ['https://bilvani.com', 'https://api.bilvani.com'];
 
 app.use(cors({
     origin: function (origin, callback) {
+        console.log("Incoming request from origin:", origin); // ✅ Debugging log
+
         if (!origin || allowedOrigins.includes(origin)) {
-            callback(null, origin);
+            callback(null, true); // ✅ Allow requests if origin is undefined or in the allowed list
         } else {
+            console.error("Blocked by CORS:", origin); // ✅ Log blocked origins
             callback(new Error('CORS not allowed'));
         }
     },
-    credentials: true, 
+    credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
-
+// ✅ Fallback CORS handling
 app.use((req, res, next) => {
     const origin = req.headers.origin;
     
-    if (allowedOrigins.includes(origin)) {
-        res.setHeader('Access-Control-Allow-Origin', origin);
+    console.log("Fallback Middleware - Origin:", origin);
+
+    if (!origin || allowedOrigins.includes(origin)) {
+        res.setHeader('Access-Control-Allow-Origin', origin || '*');
         res.setHeader('Access-Control-Allow-Credentials', 'true');
         res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
         res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
