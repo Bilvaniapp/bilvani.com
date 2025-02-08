@@ -480,24 +480,23 @@ const customColorOrder = () => {
     setEnteredOtp(e.target.value);
   };
 
+
   const handleVerifyOtp = async () => {
     try {
       // Retrieve selectedStore from localStorage
       const selectedStore = JSON.parse(localStorage.getItem("selectedStore"));
-
+  
       const allAddresses = orders.map((order) => {
         return `${order.address}, ${order.district}, ${order.state} - ${order.pincode}`;
       });
-
+  
       const userphoneNumber = orders[0]?.phoneNumber;
-      // Initialize storeAddress as empty string in case selectedStore is not present
       let storeAddress = "";
-
-      // If selectedStore exists, construct the store address
+  
       if (selectedStore) {
         storeAddress = `${selectedStore.billingAddress}, ${selectedStore.city}, ${selectedStore.state}`;
       }
-
+  
       const shades = Array.isArray(parsedOrderData?.selectedColors?.colors)
         ? parsedOrderData.selectedColors.colors.map((color) => ({
             hex: color.hex,
@@ -505,15 +504,13 @@ const customColorOrder = () => {
             intensity: color.intensity,
           }))
         : [];
-
-      
-
+  
       const mixedColorHex =
         parsedOrderData?.selectedColors?.mixedColorHex || "#0000000000";
       const finalPrice = discountedPrice || totalPrice;
-
+  
       const productDetailsToSave = {
-        name: productDetails.title, // Correct property if needed
+        name: productDetails.title,
         base: productDetails.Types,
         type: productDetails.option,
         totalPrice: finalPrice,
@@ -522,37 +519,42 @@ const customColorOrder = () => {
         shade: shades,
         payment: {
           method: "cash",
-          paymentId: null, 
+          paymentId: null,
         },
         coupon: couponCode,
-        storeAddress: storeAddress, 
+        storeAddress: storeAddress,
         userAddress: allAddresses.join(", "),
-        confirm: "pending", 
-        orderComplete: false, 
+        confirm: "pending",
+        orderComplete: false,
         orderStatus: "in progress",
-        phoneNumber:userphoneNumber,
+        phoneNumber: userphoneNumber,
       };
-
+  
+      console.log("Sending OTP and product details to backend:", {
+        otp: enteredOtp,
+        productDetails: productDetailsToSave,
+      });
+  
       // Send the OTP and order details to the backend
       const response = await axios.post(
         `${BASE_URL}/api/bilvani/verify/otp/order/confirmed`,
         {
-          otp: enteredOtp, // OTP entered by the user
-          productDetails: productDetailsToSave, // Send product details
+          otp: enteredOtp,
+          productDetails: productDetailsToSave,
         },
-        { withCredentials: true } // Include cookies
+        { withCredentials: true }
       );
-
+  
       if (response.status === 201) {
         setShowOtpModal(false);
         navigate("/view-order/link==home_link&refrence==Bilvani");
       } else {
         console.error("Failed to verify OTP:", response.data.error);
-        // Handle failure smoothly without breaking the flow
+        setResponseMessage("Failed to verify OTP. Please try again.");
       }
     } catch (error) {
       console.error("Error verifying OTP:", error);
-      // Handle error smoothly without breaking the flow
+      setResponseMessage("An error occurred while verifying OTP. Please try again.");
     }
   };
 
