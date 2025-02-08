@@ -71,6 +71,9 @@ import AddStaff from "./admin-component/admin-internal/admin-main/admin-master/s
 import ManageStaff from "./admin-component/admin-internal/admin-main/admin-master/staff/manageStaff/manageStaff.jsx";
 import AdminRouteSingup from "./admin-component/admin-Security/adminPrivate/adminprivate.jsx";
 import NotLoginPrivateAdmin from "./admin-component/admin-Security/adminPrivate/notLoginPrivate/notLoginPrivate.jsx";
+import CouponGen from "./admin-component/admin-internal/admin-main/admin-coupon/admin-coupon.jsx";
+
+
 // Super Admin
 import NewClient from "./super Admin/addClient/newClient/newClient.jsx";
 import ClientManage from "./super Admin/addClient/clientManage/clientManage.jsx";
@@ -176,6 +179,10 @@ const router = createBrowserRouter(
       <Route
         path="/admin-bilvani-sub-category"
         element={<SubCategory />}
+      ></Route>
+       <Route
+        path="/admin/bilvani/coupon"
+        element={<CouponGen />}
       ></Route>
       <Route
         path="/admin-bilvani-enter-product"
