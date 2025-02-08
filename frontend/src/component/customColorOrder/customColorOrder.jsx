@@ -131,7 +131,7 @@ const customColorOrder = () => {
                 userAddress: allAddresses,
                 orderComplete: false,
                 orderStatus: "accepted",
-                phoneNumber:userphoneNumber
+                phoneNumber: userphoneNumber,
               };
 
               // Send order details for payment verification
@@ -161,7 +161,7 @@ const customColorOrder = () => {
               console.log("Error sending order details to backend:", error);
             }
           },
-          
+
           theme: {
             color: "#3399cc",
           },
@@ -480,23 +480,26 @@ const customColorOrder = () => {
     setEnteredOtp(e.target.value);
   };
 
-
   const handleVerifyOtp = async () => {
     try {
       // Retrieve selectedStore from localStorage
-      const selectedStore = JSON.parse(localStorage.getItem("selectedStore"));
-  
-      const allAddresses = orders.map((order) => {
-        return `${order.address}, ${order.district}, ${order.state} - ${order.pincode}`;
-      });
-  
-      const userphoneNumber = orders[0]?.phoneNumber;
+      const selectedStore =
+        JSON.parse(localStorage.getItem("selectedStore")) || {};
+
+      // Ensure `orders` exist before mapping
+      const allAddresses = (orders || []).map(
+        (order) =>
+          `${order.address}, ${order.district}, ${order.state} - ${order.pincode}`
+      );
+
+      const userphoneNumber = orders?.[0]?.phoneNumber || "";
+
       let storeAddress = "";
-  
-      if (selectedStore) {
+      if (selectedStore?.billingAddress) {
         storeAddress = `${selectedStore.billingAddress}, ${selectedStore.city}, ${selectedStore.state}`;
       }
-  
+
+      // Ensure `parsedOrderData.selectedColors.colors` is an array
       const shades = Array.isArray(parsedOrderData?.selectedColors?.colors)
         ? parsedOrderData.selectedColors.colors.map((color) => ({
             hex: color.hex,
@@ -504,37 +507,39 @@ const customColorOrder = () => {
             intensity: color.intensity,
           }))
         : [];
-  
+
+      // Fix invalid hex fallback
       const mixedColorHex =
-        parsedOrderData?.selectedColors?.mixedColorHex || "#0000000000";
+        parsedOrderData?.selectedColors?.mixedColorHex || "#000000";
+
       const finalPrice = discountedPrice || totalPrice;
-  
+
       const productDetailsToSave = {
-        name: productDetails.title,
-        base: productDetails.Types,
-        type: productDetails.option,
+        name: productDetails?.title || "Unknown Product",
+        base: productDetails?.Types || "Unknown Base",
+        type: productDetails?.option || "Unknown Type",
         totalPrice: finalPrice,
-        quantity: itemCount,
+        quantity: itemCount || 1,
         mixColor: mixedColorHex,
         shade: shades,
         payment: {
           method: "cash",
           paymentId: null,
         },
-        coupon: couponCode,
-        storeAddress: storeAddress,
+        coupon: couponCode || "",
+        storeAddress: storeAddress || "",
         userAddress: allAddresses.join(", "),
         confirm: "pending",
         orderComplete: false,
         orderStatus: "in progress",
         phoneNumber: userphoneNumber,
       };
-  
+
       console.log("Sending OTP and product details to backend:", {
         otp: enteredOtp,
         productDetails: productDetailsToSave,
       });
-  
+
       // Send the OTP and order details to the backend
       const response = await axios.post(
         `${BASE_URL}/api/bilvani/verify/otp/order/confirmed`,
@@ -544,22 +549,22 @@ const customColorOrder = () => {
         },
         { withCredentials: true }
       );
-  
+
       if (response.status === 201) {
         setShowOtpModal(false);
-        navigate("/view-order/link==home_link&refrence==Bilvani");
+        navigate(encodeURI("/view-order/link==home_link&refrence==Bilvani"));
       } else {
         console.error("Failed to verify OTP:", response.data.error);
         setResponseMessage("Failed to verify OTP. Please try again.");
       }
     } catch (error) {
       console.error("Error verifying OTP:", error);
-      setResponseMessage("An error occurred while verifying OTP. Please try again.");
+      setResponseMessage(
+        "An error occurred while verifying OTP. Please try again."
+      );
     }
   };
 
-
- 
   return (
     <div className="payment-address-main">
       <Homepage />
