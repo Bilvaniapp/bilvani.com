@@ -84,7 +84,9 @@ const Signup = () => {
       try {
         const response = await axios.post(${BASE_URL}/sign-up, { email: formData.email, phone: formData.phone });
         console.log(response.data);
-        setSendOtp('Your OTP has been successfully sent.');
+        alert("Your OTP is Successfully Sent To Email");
+        setSendOtp('Your OTP is Successfully Sent To Email');
+       
         setShowOTPField(true);
       } catch (error) {
         setSignupError("Signup Error :  " + error.response.data.message);
@@ -158,7 +160,7 @@ const Signup = () => {
     if (sendOtp) {
       const timer = setTimeout(() => {
         setSendOtp('');
-      }, 2000);
+      }, 6000);
       return () => clearTimeout(timer);
     }
   }, [sendOtp]);
