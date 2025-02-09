@@ -54,7 +54,7 @@ const Signup = () => {
         return;
       }
 
-      const gmailRegex = /^([\w]*[\w.]*(?!\.)@gmail.com)/;
+      const gmailRegex = /^([\w][\w.](?!\.)@gmail.com)/;
       if (!gmailRegex.test(formData.email.trim())) {
         setEmailError("Please enter a valid Gmail address");
         return;
@@ -73,7 +73,7 @@ const Signup = () => {
         return;
       }
 
-      const indianPhoneRegex = /^(\+91[-\s]?)?[0]?(91)?[789]\d{9}$/;
+      const indianPhoneRegex = /^(?:\+?\d{1,3}[-\s]?)?(\d{10})$/;
       if (!indianPhoneRegex.test(formData.phone.trim())) {
         setPhoneError("Please enter a valid Indian phone number");
         return;
@@ -82,7 +82,7 @@ const Signup = () => {
       setLoading(true);  // Set loading to true when form is submitted
 
       try {
-        const response = await axios.post(`${BASE_URL}/sign-up`, { email: formData.email, phone: formData.phone });
+        const response = await axios.post(${BASE_URL}/sign-up, { email: formData.email, phone: formData.phone });
         console.log(response.data);
         setSendOtp('Your OTP has been successfully sent.');
         setShowOTPField(true);
@@ -96,7 +96,7 @@ const Signup = () => {
       setLoadingOTP(true);  // Set loadingOTP to true when OTP verification starts
 
       try {
-        const response = await axios.post(`${BASE_URL}/verify-email`, {
+        const response = await axios.post(${BASE_URL}/verify-email, {
           email: formData.email,
           otp: otp,
           name: formData.name,
@@ -105,7 +105,7 @@ const Signup = () => {
         }, { withCredentials: true });
         console.log(response.data);
 
-        document.cookie = `permanentId=${response.data.permanentId}; path=/`;
+        document.cookie = permanentId=${response.data.permanentId}; path=/;
 
         navigate('/');
       } catch (error) {
@@ -129,7 +129,7 @@ const Signup = () => {
 
   const handleResendOTP = async () => {
     try {
-      await axios.post(`${BASE_URL}/resend-otp`, { email: formData.email });
+      await axios.post(${BASE_URL}/resend-otp, { email: formData.email });
       setSendOtp("OTP resent successfully");
     } catch (error) {
       console.error("Error resending OTP:", error.response.data.error);
@@ -312,4 +312,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Signup;
